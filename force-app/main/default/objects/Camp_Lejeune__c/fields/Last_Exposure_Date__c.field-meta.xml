@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Exposure_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>When were you last exposed to contaminated water at Camp Lejeune?</inlineHelpText>
+    <label>Last Exposure Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

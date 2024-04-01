@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Injury_diagnosed_with_text__c</fullName>
+    <description>Field created for conditionally showing injury related fields</description>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Breast Cancer (DNQ)&quot;), &quot;Breast Cancer (DNQ)&quot;, NULL) + 
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Uterine Cancer&quot;), &quot;Uterine Cancer&quot;, NULL) + 
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Vaginal Cancer&quot;), &quot;Vaginal Cancer&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Lung Cancer (DNQ)&quot;), &quot;Lung Cancer (DNQ)&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Endometrial Cancer&quot;), &quot;Endometrial Cancer&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Fallopian Tube Cancer&quot;), &quot;Fallopian Tube Cancer&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Mesothelioma&quot;), &quot;Mesothelioma&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Uterine Fibroid (DNQ)&quot;), &quot;Uterine Fibroid (DNQ)&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Vulvar Cancer&quot;), &quot;Vulvar Cancer&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Cervical Cancer&quot;), &quot;Cervical Cancer&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Hysterectomy (DNQ)&quot;), &quot;Hysterectomy (DNQ)&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Primary Peritoneal Cancer&quot;), &quot;Primary Peritoneal Cancer&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Carcinosarcoma&quot;), &quot;Carcinosarcoma&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Endometriosis (DNQ)&quot;), &quot;Endometriosis (DNQ)&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Ovarian Cancer&quot;), &quot;Ovarian Cancer&quot;, NULL) +
+IF(INCLUDES( Injury_diagnosed_with__c	, &quot;Omentum Cancer&quot;), &quot;Omentum Cancer&quot;, NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Injury diagnosed with text</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

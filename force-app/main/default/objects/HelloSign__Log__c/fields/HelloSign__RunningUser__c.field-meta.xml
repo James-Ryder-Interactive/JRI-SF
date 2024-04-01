@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__RunningUser__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>String field on the Log custom object. Stores the running user at the time the log was created.</description>
+    <externalId>false</externalId>
+    <label>Running User</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>HelloSign_Logs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

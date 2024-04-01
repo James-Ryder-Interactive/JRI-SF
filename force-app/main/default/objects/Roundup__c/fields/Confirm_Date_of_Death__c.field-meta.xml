@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Confirm_Date_of_Death__c</fullName>
+    <externalId>false</externalId>
+    <label>Confirm Date of Death</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DOD confirmed</fullName>
+                <default>false</default>
+                <label>DOD confirmed</label>
+            </value>
+            <value>
+                <fullName>DOD not confirmed</fullName>
+                <default>false</default>
+                <label>DOD not confirmed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

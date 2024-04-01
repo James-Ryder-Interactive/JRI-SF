@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trimester_of_Tylenol_Use__c</fullName>
+    <description>Approximately what trimester in your pregnancy did you take Tylenol (also  known as Acetaminophen or Paracetamol)?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Approximately what trimester in your pregnancy did you take Tylenol (also  known as Acetaminophen or Paracetamol)?</inlineHelpText>
+    <label>Trimester of Tylenol Use</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1st trimester (DNQ)</fullName>
+                <default>false</default>
+                <label>1st trimester (DNQ)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

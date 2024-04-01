@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Presence_at_Camp_Lejeune_Details__c</fullName>
+    <description>What was the nature of your presence at Camp Lejeune? What was your job and the name of your employer?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What was the nature of your presence at Camp Lejeune? What was your job and the name of your employer?</inlineHelpText>
+    <label>Presence at Camp Lejeune Details</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

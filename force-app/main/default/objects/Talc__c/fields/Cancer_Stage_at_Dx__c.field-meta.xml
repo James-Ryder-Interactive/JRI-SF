@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancer_Stage_at_Dx__c</fullName>
+    <description>If you were Dx with Ovarian, Fallopian tube or Primary Peritoneal Cancer, what was the stage of the cancer at Dx?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If you were Dx with Ovarian, Fallopian tube or Primary Peritoneal Cancer, what was the stage of the cancer at Dx?</inlineHelpText>
+    <label>Cancer Stage at Dx</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Stage I</fullName>
+                <default>false</default>
+                <label>Stage I</label>
+            </value>
+            <value>
+                <fullName>Stage II</fullName>
+                <default>false</default>
+                <label>Stage II</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Previously_represented_by_Attorney__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Were you previously represented by an attorney in this case?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Were you previously represented by an attorney in this case?</inlineHelpText>
+    <label>Previously represented by Attorney?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

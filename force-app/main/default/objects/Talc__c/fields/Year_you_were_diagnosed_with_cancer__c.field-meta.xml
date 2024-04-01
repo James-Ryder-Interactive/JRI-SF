@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Year_you_were_diagnosed_with_cancer__c</fullName>
+    <description>What year were you diagnosed with cancer after using Talcum Powder?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What year were you diagnosed with cancer after using Talcum Powder?</inlineHelpText>
+    <label>Year you were diagnosed</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

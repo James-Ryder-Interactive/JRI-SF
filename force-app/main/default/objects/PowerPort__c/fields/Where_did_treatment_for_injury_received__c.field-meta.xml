@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Where_did_treatment_for_injury_received__c</fullName>
+    <description>Where did you receive the treatment for this injury? (Name of hospital, State of facility)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Where did you receive the treatment for this injury? (Name of hospital, State of facility)</inlineHelpText>
+    <label>Where did treatment for injury received?</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__HelloSign_Signature_Request__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>String field of the signature request record for the queue record</description>
+    <externalId>false</externalId>
+    <label>Dropbox Sign Signature Request</label>
+    <referenceTo>HelloSign__HelloSign_Signature_Request__c</referenceTo>
+    <relationshipLabel>Dropbox Sign Batch Queues</relationshipLabel>
+    <relationshipName>HelloSign_Batch_Queues</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

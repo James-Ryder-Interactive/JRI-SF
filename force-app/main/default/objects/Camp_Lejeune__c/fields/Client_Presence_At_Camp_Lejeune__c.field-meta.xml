@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Presence_At_Camp_Lejeune__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Why was the client at Camp Lejeune between August 1, 1953, and December 31, 1987?</inlineHelpText>
+    <label>Client Presence At Camp Lejeune</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Service Member</fullName>
+                <default>false</default>
+                <label>Service Member</label>
+            </value>
+            <value>
+                <fullName>Service Member Dependent (including in utero)</fullName>
+                <default>false</default>
+                <label>Service Member Dependent (including in utero)</label>
+            </value>
+            <value>
+                <fullName>Civilian/Other</fullName>
+                <default>false</default>
+                <label>Civilian/Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

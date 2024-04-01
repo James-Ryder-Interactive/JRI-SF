@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Lock_Related_Signer</fullName>
+    <active>true</active>
+    <description>Validation rule that returns an error message. Prevents users from overriding the default signer. Allows the signer role assignment step in sending a template to be skipped.</description>
+    <errorConditionFormula>(text(HelloSign__RoleType__c) = &apos;Related Contact&apos; || text(HelloSign__RoleType__c) = &apos;Related User&apos;)
+    &amp;&amp; ISBLANK(TRIM(HelloSign__RelationshipField__c))
+    &amp;&amp; HelloSign__IsLocked__c = true</errorConditionFormula>
+    <errorMessage>A default lookup field is required to lock this signer role</errorMessage>
+</ValidationRule>

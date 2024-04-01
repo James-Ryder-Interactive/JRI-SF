@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__ArchiveTemplate</fullName>
+    <availability>online</availability>
+    <description>Clickable button on Template record. Deletes the Template off Dropbox Sign and Archives the Salesforce objects</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Archive Template</masterLabel>
+    <openType>sidebar</openType>
+    <page>HelloSign__HSignTemplateAction</page>
+    <protected>false</protected>
+</WebLink>

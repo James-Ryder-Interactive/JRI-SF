@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__DisplayOrder__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Formula field on the SignerRole__c custom object. The display order for sorting on screen</description>
+    <externalId>false</externalId>
+    <formula>IF(HelloSign__IsCcRole__c || ISPICKVAL(HelloSign__SignerAction__c, &apos;cc&apos;),
+  &apos;Copy &apos; + TEXT(HelloSign__SignerOrder__c + 1),
+  &apos; Signer &apos; + TEXT(HelloSign__SignerOrder__c + 1)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Display Order</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

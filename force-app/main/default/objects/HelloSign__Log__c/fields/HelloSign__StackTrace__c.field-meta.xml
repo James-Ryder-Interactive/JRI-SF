@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__StackTrace__c</fullName>
+    <deprecated>false</deprecated>
+    <description>String field on the Log custom object. Stores the apex stack trace.</description>
+    <externalId>false</externalId>
+    <label>Stack Trace</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

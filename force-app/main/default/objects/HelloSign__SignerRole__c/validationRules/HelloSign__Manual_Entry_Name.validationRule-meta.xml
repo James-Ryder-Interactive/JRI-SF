@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Manual_Entry_Name</fullName>
+    <active>true</active>
+    <description>Validation rule that returns an error message. Checks for email with no name for a manual signer.</description>
+    <errorConditionFormula>text(HelloSign__RoleType__c) = &apos;Specific Email&apos;
+&amp;&amp; NOT(ISBLANK(TRIM(HelloSign__SpecificEmail__c)))
+&amp;&amp; (ISBLANK(TRIM(HelloSign__SpecificFirstName__c)))</errorConditionFormula>
+    <errorMessage>Please enter in a name when selecting Specific Email as the Role Type.</errorMessage>
+</ValidationRule>

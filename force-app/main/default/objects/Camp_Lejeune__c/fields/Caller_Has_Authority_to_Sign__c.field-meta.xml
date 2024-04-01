@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caller_Has_Authority_to_Sign__c</fullName>
+    <externalId>false</externalId>
+    <label>Caller Has Authority to Sign?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Executor of estate</fullName>
+                <default>false</default>
+                <label>Executor of estate</label>
+            </value>
+            <value>
+                <fullName>POA</fullName>
+                <default>false</default>
+                <label>POA</label>
+            </value>
+            <value>
+                <fullName>NOK</fullName>
+                <default>false</default>
+                <label>NOK</label>
+            </value>
+            <value>
+                <fullName>Spouse</fullName>
+                <default>false</default>
+                <label>Spouse</label>
+            </value>
+            <value>
+                <fullName>Guardianship</fullName>
+                <default>false</default>
+                <label>Guardianship</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

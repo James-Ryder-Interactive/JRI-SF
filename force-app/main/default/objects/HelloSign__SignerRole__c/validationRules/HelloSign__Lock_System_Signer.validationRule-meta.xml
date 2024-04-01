@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Lock_System_Signer</fullName>
+    <active>true</active>
+    <description>Validation rule that returns an error message. System Contact/User requires a default record.</description>
+    <errorConditionFormula>((text(HelloSign__RoleType__c) = &apos;Select System Contact&apos;
+    &amp;&amp; ISBLANK(TRIM(HelloSign__SpecificContact__c)))
+||
+(text(HelloSign__RoleType__c) = &apos;Select Salesforce User&apos;
+    &amp;&amp; ISBLANK(TRIM(HelloSign__SpecificUser__c))))
+&amp;&amp; HelloSign__IsLocked__c = true</errorConditionFormula>
+    <errorMessage>Locking a specific contact or user requires a default lookup</errorMessage>
+</ValidationRule>

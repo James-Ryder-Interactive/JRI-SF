@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Error__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Checkbox field to specify if the queue record experienced an error</description>
+    <externalId>false</externalId>
+    <label>Error</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

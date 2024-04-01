@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Serious_Birth_Defects_Diagnosis_Da__c</fullName>
+    <externalId>false</externalId>
+    <label>Other Serious Birth Defects Diagnosis Da</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

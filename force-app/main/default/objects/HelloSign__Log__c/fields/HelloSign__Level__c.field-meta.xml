@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Level__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Dropdown field on the Log custom object. Sets the level of logging, informational, warning, or error.</description>
+    <externalId>false</externalId>
+    <label>Level</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>INFO</fullName>
+                <default>false</default>
+                <label>INFO</label>
+            </value>
+            <value>
+                <fullName>WARNING</fullName>
+                <default>false</default>
+                <label>WARNING</label>
+            </value>
+            <value>
+                <fullName>ERROR</fullName>
+                <default>false</default>
+                <label>ERROR</label>
+            </value>
+            <value>
+                <fullName>BATCH SEND WITH TEMPLATE ERROR</fullName>
+                <default>false</default>
+                <label>BATCH SEND WITH TEMPLATE ERROR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

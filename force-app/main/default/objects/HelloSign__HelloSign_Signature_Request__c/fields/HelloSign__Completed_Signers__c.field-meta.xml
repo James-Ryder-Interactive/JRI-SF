@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Completed_Signers__c</fullName>
+    <defaultValue>0</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Number field on the signature request record. Stores the number of signer roles that have completed their signature event</description>
+    <externalId>false</externalId>
+    <label>Completed Signers</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

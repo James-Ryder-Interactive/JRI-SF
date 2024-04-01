@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retainer_Sent__c</fullName>
+    <externalId>false</externalId>
+    <label>Retainer Sent</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AG</fullName>
+                <default>false</default>
+                <label>AG</label>
+            </value>
+            <value>
+                <fullName>MBM</fullName>
+                <default>false</default>
+                <label>MBM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

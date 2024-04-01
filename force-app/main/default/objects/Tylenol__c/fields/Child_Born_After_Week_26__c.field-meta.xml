@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_Born_After_Week_26__c</fullName>
+    <externalId>false</externalId>
+    <label>Child Born After Week 26</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Week 25 or before (DNQ)</fullName>
+                <default>false</default>
+                <label>Week 25 or before (DNQ)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

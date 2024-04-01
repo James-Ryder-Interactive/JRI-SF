@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provider_1_Specialty__c</fullName>
+    <description>What is their area of practice or specialty? (Prov 1)</description>
+    <externalId>false</externalId>
+    <label>Provider 1 Specialty</label>
+    <length>20000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

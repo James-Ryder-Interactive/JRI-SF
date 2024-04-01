@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_it_a_new_port_or_the_same_as_before__c</fullName>
+    <externalId>false</externalId>
+    <label>Is it a new port or the same as before?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Same as before</fullName>
+                <default>false</default>
+                <label>Same as before</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

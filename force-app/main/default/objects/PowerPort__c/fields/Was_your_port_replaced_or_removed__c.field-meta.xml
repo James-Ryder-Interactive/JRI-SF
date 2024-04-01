@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Was_your_port_replaced_or_removed__c</fullName>
+    <description>Was your port replaced or removed?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Was your port replaced or removed?</inlineHelpText>
+    <label>Was your port replaced or removed?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No (DNQ)</fullName>
+                <default>false</default>
+                <label>No (DNQ)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

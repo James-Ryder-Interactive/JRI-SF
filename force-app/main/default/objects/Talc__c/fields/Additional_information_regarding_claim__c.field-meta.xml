@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_information_regarding_claim__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is there any additional information you would like to provide your attorneys regarding your claim?*</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is there any additional information you would like to provide your attorneys regarding your claim?</inlineHelpText>
+    <label>Additional information regarding claim</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

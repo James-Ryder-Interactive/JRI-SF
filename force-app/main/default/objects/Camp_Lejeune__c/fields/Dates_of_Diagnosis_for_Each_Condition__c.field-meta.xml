@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dates_of_Diagnosis_for_Each_Condition__c</fullName>
+    <description>Please list the date of Dx for each Cancer or medical condition you&apos;ve received a formal Dx for</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please list the date of Dx for each Cancer or medical condition you&apos;ve received a formal Dx for</inlineHelpText>
+    <label>Dates of Diagnosis for Each Condition</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

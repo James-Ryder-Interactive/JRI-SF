@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monthyear_started_using_product__c</fullName>
+    <description>Approximately what month and year did you START using the product regularly?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Approximately what month and year did you START using the product regularly?</inlineHelpText>
+    <label>Month\year started using product?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

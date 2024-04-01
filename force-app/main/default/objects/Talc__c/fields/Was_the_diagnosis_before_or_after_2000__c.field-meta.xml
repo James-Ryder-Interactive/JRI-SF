@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Was_the_diagnosis_before_or_after_2000__c</fullName>
+    <externalId>false</externalId>
+    <label>Was the diagnosis before or after 2000</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>after</fullName>
+                <default>false</default>
+                <label>after</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

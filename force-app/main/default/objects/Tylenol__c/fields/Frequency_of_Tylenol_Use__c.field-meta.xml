@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frequency_of_Tylenol_Use__c</fullName>
+    <description>Approximately how many times did you take Tylenol during the 2nd or 3rd  trimester of your pregnancy?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Approximately how many times did you take Tylenol during the 2nd or 3rd  trimester of your pregnancy?</inlineHelpText>
+    <label>Frequency of Tylenol Use</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Other:</fullName>
+                <default>false</default>
+                <label>Other:</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

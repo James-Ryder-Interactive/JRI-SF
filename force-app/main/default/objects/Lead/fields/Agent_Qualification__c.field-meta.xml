@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agent_Qualification__c</fullName>
+    <description>FOR AGENT: Was this candidate qualified or disqualified?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>FOR AGENT: Was this candidate qualified or disqualified?</inlineHelpText>
+    <label>Agent Qualification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+                <label>Qualified</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

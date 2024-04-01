@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_Tested_For_Lead__c</fullName>
+    <description>Has your child been tested by a medical provider for lead levels in his/her blood through a finger-prick, heel-prick or other blood draw method?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Has your child been tested by a medical provider for lead levels in his/her blood through a finger-prick, heel-prick or other blood draw method?</inlineHelpText>
+    <label>Child Tested For Lead</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

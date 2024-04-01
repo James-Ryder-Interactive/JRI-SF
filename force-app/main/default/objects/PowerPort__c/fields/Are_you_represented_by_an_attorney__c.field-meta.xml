@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Are_you_represented_by_an_attorney__c</fullName>
+    <description>Are you represented by an attorney with regard to your port implant?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Are you represented by an attorney with regard to your port implant?</inlineHelpText>
+    <label>Are you represented by an attorney?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes (DNQ)</fullName>
+                <default>false</default>
+                <label>Yes (DNQ)</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

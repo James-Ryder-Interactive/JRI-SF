@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Cancer_Rel_1__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of Cancer - Rel 1</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Breast Cancer</fullName>
+                <default>false</default>
+                <label>Breast Cancer</label>
+            </value>
+            <value>
+                <fullName>Ovarian Cancer</fullName>
+                <default>false</default>
+                <label>Ovarian Cancer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Application_Frequency__c</fullName>
+    <description>How often did they apply this product?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How often did they apply this product?</inlineHelpText>
+    <label>Product Application Frequency</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A few times a year (DNQ)</fullName>
+                <default>false</default>
+                <label>A few times a year (DNQ)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

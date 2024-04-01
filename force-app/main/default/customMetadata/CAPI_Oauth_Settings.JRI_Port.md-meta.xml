@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>JRI - Port</label>
+    <protected>false</protected>
+    <values>
+        <field>Access_Token__c</field>
+        <value xsi:type="xsd:string">EAAJyohiQ73sBOZCRB6LcSjihVtqJ3rynYEesUcECU6jZA59PZAdRVF22lllxJfky9PsBtnzVZBZAqi9vOWysXcvjjsqGBmSt8DggRX3KHF9bIgrgephuuaWZATZBLQVS1EstdBr1VbNTLCZAAdonIwXXyFA2gDCcykkXVk20ONUArW7yE2KGp4kPchzagIL9d0LccwZDZD</value>
+    </values>
+    <values>
+        <field>Pixel_ID__c</field>
+        <value xsi:type="xsd:string">1571513980036642</value>
+    </values>
+</CustomMetadata>

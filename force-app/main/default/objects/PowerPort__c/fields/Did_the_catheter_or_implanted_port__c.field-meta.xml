@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Did_the_catheter_or_implanted_port__c</fullName>
+    <description>Did the catheter or implanted port: (Check all boxes that apply)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Did the catheter or implanted port: (Check all boxes that apply)</inlineHelpText>
+    <label>Did the catheter or implanted port:</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Break</fullName>
+                <default>false</default>
+                <label>Break</label>
+            </value>
+            <value>
+                <fullName>Fracture</fullName>
+                <default>false</default>
+                <label>Fracture</label>
+            </value>
+            <value>
+                <fullName>Fracture causing embolism</fullName>
+                <default>false</default>
+                <label>Fracture causing embolism</label>
+            </value>
+            <value>
+                <fullName>Broken pieces embedded in artery/organ</fullName>
+                <default>false</default>
+                <label>Broken pieces embedded in artery/organ</label>
+            </value>
+            <value>
+                <fullName>Cardiac puncture</fullName>
+                <default>false</default>
+                <label>Cardiac puncture</label>
+            </value>
+            <value>
+                <fullName>Broken pieces passed through the heart</fullName>
+                <default>false</default>
+                <label>Broken pieces passed through the heart</label>
+            </value>
+            <value>
+                <fullName>Broken pieces perforated a vein or organ</fullName>
+                <default>false</default>
+                <label>Broken pieces perforated a vein or organ</label>
+            </value>
+            <value>
+                <fullName>Hematoma</fullName>
+                <default>false</default>
+                <label>Hematoma</label>
+            </value>
+            <value>
+                <fullName>Hemorrhage</fullName>
+                <default>false</default>
+                <label>Hemorrhage</label>
+            </value>
+            <value>
+                <fullName>Laceration to blood vessels</fullName>
+                <default>false</default>
+                <label>Laceration to blood vessels</label>
+            </value>
+            <value>
+                <fullName>Infection more then 90 days after implant</fullName>
+                <default>false</default>
+                <label>Infection more then 90 days after implant</label>
+            </value>
+            <value>
+                <fullName>Thromboembolic event more the 90 days after implant</fullName>
+                <default>false</default>
+                <label>Thromboembolic event more the 90 days after implant</label>
+            </value>
+            <value>
+                <fullName>Blood clots more than 90 days after implant</fullName>
+                <default>false</default>
+                <label>Blood clots more than 90 days after implant</label>
+            </value>
+            <value>
+                <fullName>Arrhythmia more than 90 days after implant</fullName>
+                <default>false</default>
+                <label>Arrhythmia more than 90 days after implant</label>
+            </value>
+            <value>
+                <fullName>Leakage at port site</fullName>
+                <default>false</default>
+                <label>Leakage at port site</label>
+            </value>
+            <value>
+                <fullName>Dislodgement or disconnection of the catheter from the port</fullName>
+                <default>false</default>
+                <label>Dislodgement or disconnection of the catheter from the port</label>
+            </value>
+            <value>
+                <fullName>Cardiac/pericardial tamponade</fullName>
+                <default>false</default>
+                <label>Cardiac/pericardial tamponade</label>
+            </value>
+            <value>
+                <fullName>Necrosis around the port</fullName>
+                <default>false</default>
+                <label>Necrosis around the port</label>
+            </value>
+            <value>
+                <fullName>Severe and persistent pain around port/catheter</fullName>
+                <default>false</default>
+                <label>Severe and persistent pain around port/catheter</label>
+            </value>
+            <value>
+                <fullName>Death</fullName>
+                <default>false</default>
+                <label>Death</label>
+            </value>
+            <value>
+                <fullName>Other Injury not listed</fullName>
+                <default>false</default>
+                <label>Other Injury not listed</label>
+            </value>
+            <value>
+                <fullName>Not Injured (DNQ)</fullName>
+                <default>false</default>
+                <label>Not Injured (DNQ)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

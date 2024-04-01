@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hospital_where_diagnosed_Vulvar_cancer__c</fullName>
+    <description>What is the name of the hospital/facility where [say you/other name here] were diagnosed with vulvar cancer?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the name of the hospital/facility where [say you/other name here] were diagnosed with vulvar cancer?</inlineHelpText>
+    <label>Hospital where diagnosed Vulvar cancer</label>
+    <length>20000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

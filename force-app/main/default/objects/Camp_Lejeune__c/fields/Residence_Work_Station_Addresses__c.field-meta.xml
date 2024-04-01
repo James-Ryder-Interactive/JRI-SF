@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Residence_Work_Station_Addresses__c</fullName>
+    <description>Please list all address(es) of where you lived, worked or were stationed including the name of the base</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please list all address(es) of where you lived, worked or were stationed including the name of the base</inlineHelpText>
+    <label>Residence/Work/Station Addresses</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Willing_to_share_information__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>You will need to communicate by phone, email, and text message with our case managers throughout this process. You will need to share with our law firm, confidentially, medical records, health information, and any medical liens you have. Are you willing to do this?*</description>
+    <externalId>false</externalId>
+    <inlineHelpText>You will need to communicate by phone, email, and text message with our case managers throughout this process. You will need to share with our law firm, confidentially, medical records, health information, and any medical liens you have. Are you willing to do this?*</inlineHelpText>
+    <label>Willing to share information?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

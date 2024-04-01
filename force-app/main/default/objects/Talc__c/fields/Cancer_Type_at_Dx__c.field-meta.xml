@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancer_Type_at_Dx__c</fullName>
+    <externalId>false</externalId>
+    <label>Cancer Type at Dx</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>High-Grade Serous</fullName>
+                <default>false</default>
+                <label>High-Grade Serous</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

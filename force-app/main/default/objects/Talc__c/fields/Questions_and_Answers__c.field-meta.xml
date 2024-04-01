@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Questions_and_Answers__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;Are you a new or existing client? *** &quot; +  New_or_Existing_Client__c &amp;BR()  
++ &quot; May I have your first and last name please? *** &quot; + Name &amp;BR()  
++ &quot;Can I have the best call back number in case we get disconnected or we need additional information. *** &quot; 
++ Best_number_to_reach_you_at__c &amp;BR() + &quot;Is this a cell phone or landline? *** &quot; + TEXT(Cell_phone_or_landline__c) &amp;BR()
++ &quot;The next important thing we need to know is if you are currently represented by another lawyer in connection with this case. If you are, we are not allowed to talk to you. Additionally, having multiple lawyers will cause issues for you during the claim process. Are you currently represented by a lawyer in connection with your use of talcum powder? *** &quot; + TEXT(Represented_by_a_lawyer__c) &amp;BR()
++ &quot;Were you previously represented by an attorney in this case? *** &quot; + IF(Previously_represented_by_Attorney__c  = true, &quot;Yes&quot;, &quot;No&quot;)&amp;BR()
++ &quot;What injury were you diagnosed with? *** &quot; + Injury_diagnosed_with_text__c &amp;BR()
++ &quot;Was the diagnosis date less than four years after initial use? *** &quot; + Diagnosis_date_less_than_4_years__c &amp;BR()
++ &quot;Would you please confirm that you or your named medical professional will be able to provide proof you were diagnosed with xxxx? *** &quot; + TEXT(Show_medical_professional_proof__c) &amp;BR()</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Questions &amp; Answers</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

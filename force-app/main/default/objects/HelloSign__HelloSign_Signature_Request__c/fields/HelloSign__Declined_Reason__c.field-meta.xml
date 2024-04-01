@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Declined_Reason__c</fullName>
+    <deprecated>false</deprecated>
+    <description>String field on the signature request record. Upon completion of &quot;decline to sign&quot; at the same time the latest action becomes &quot;declined&quot;</description>
+    <externalId>false</externalId>
+    <label>Declined Reason</label>
+    <length>500</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

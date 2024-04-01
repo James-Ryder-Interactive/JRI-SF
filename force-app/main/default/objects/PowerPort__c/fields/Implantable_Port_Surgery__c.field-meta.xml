@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Implantable_Port_Surgery__c</fullName>
+    <description>Did you or a loved one have (or had) an implantable port surgically  implanted into your body?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Did you or a loved one have (or had) an implantable port surgically  implanted into your body?</inlineHelpText>
+    <label>Implantable Port Surgery</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Myself</fullName>
+                <default>false</default>
+                <label>Myself</label>
+            </value>
+            <value>
+                <fullName>Loved One</fullName>
+                <default>false</default>
+                <label>Loved One</label>
+            </value>
+            <value>
+                <fullName>No (DNQ)</fullName>
+                <default>false</default>
+                <label>No (DNQ)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

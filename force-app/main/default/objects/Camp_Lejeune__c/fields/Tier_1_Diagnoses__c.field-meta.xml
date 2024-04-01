@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tier_1_Diagnoses__c</fullName>
+    <externalId>false</externalId>
+    <label>Tier 1 Diagnoses</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bladder cancer</fullName>
+                <default>false</default>
+                <label>Bladder cancer</label>
+            </value>
+            <value>
+                <fullName>Kidney cancer</fullName>
+                <default>false</default>
+                <label>Kidney cancer</label>
+            </value>
+            <value>
+                <fullName>Liver cancer</fullName>
+                <default>false</default>
+                <label>Liver cancer</label>
+            </value>
+            <value>
+                <fullName>Non-Hodgkin lymphoma</fullName>
+                <default>false</default>
+                <label>Non-Hodgkin lymphoma</label>
+            </value>
+            <value>
+                <fullName>None of the above (tier 2,3,4)</fullName>
+                <default>false</default>
+                <label>None of the above (tier 2,3,4)</label>
+            </value>
+            <value>
+                <fullName>Parkinson&apos;s disease</fullName>
+                <default>false</default>
+                <label>Parkinson&apos;s disease</label>
+            </value>
+            <value>
+                <fullName>Leukemia (All types, adult or childhood)</fullName>
+                <default>false</default>
+                <label>Leukemia (All types, adult or childhood)</label>
+            </value>
+            <value>
+                <fullName>Kidney disease (End stage renal (ESRD), Renal Toxicity, Chronic Kidney Disease, etc.)</fullName>
+                <default>false</default>
+                <label>Kidney disease (End stage renal (ESRD), Renal Toxicity, Chronic Kidney Disease, etc.)</label>
+            </value>
+            <value>
+                <fullName>Multiple myeloma and myelodysplastic Syndromes</fullName>
+                <default>false</default>
+                <label>Multiple myeloma and myelodysplastic Syndromes</label>
+            </value>
+            <value>
+                <fullName>Systemic sclerosis</fullName>
+                <default>false</default>
+                <label>Systemic sclerosis</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

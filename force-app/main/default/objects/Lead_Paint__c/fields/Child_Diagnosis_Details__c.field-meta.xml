@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_Diagnosis_Details__c</fullName>
+    <description>What learning disability or health issue has your child been diagnosed with?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What learning disability or health issue has your child been diagnosed with?</inlineHelpText>
+    <label>Child Diagnosis Details</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

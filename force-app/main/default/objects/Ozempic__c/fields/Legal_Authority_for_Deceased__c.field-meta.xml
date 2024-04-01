@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legal_Authority_for_Deceased__c</fullName>
+    <externalId>false</externalId>
+    <label>Legal Authority for Deceased</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Legal Authority for Deceased</fullName>
+                <default>false</default>
+                <label>Legal Authority for Deceased</label>
+            </value>
+            <value>
+                <fullName>POA</fullName>
+                <default>false</default>
+                <label>POA</label>
+            </value>
+            <value>
+                <fullName>Next of Kin</fullName>
+                <default>false</default>
+                <label>Next of Kin</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Confirm_inormation_to_be_true__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Our legal team wants you to know that we confirm identity and all the personal information and history you have provided is accurate. We take on the responsibility of representing people with the greatest care. As your potential legal team, we must ensure that the people we fight for are fully transparent with us at all times so that we can best represent them. Do you confirm this to be true?*</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Our legal team wants you to know that we confirm identity and all the personal information and history you have provided is accurate. We take on the responsibility of representing people with the greatest care. As your potential legal team, we must ensure that the people we fight for are fully transparent with us at all times so that we can best represent them. Do you confirm this to be true?*</inlineHelpText>
+    <label>Confirm inormation to be true?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

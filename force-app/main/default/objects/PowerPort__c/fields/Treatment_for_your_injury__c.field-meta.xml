@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Treatment_for_your_injury__c</fullName>
+    <description>What treatment did you receive for your injury?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What treatment did you receive for your injury?</inlineHelpText>
+    <label>Treatment received for your injury</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hospitalization</fullName>
+                <default>false</default>
+                <label>Hospitalization</label>
+            </value>
+            <value>
+                <fullName>Surgery</fullName>
+                <default>false</default>
+                <label>Surgery</label>
+            </value>
+            <value>
+                <fullName>Medication</fullName>
+                <default>false</default>
+                <label>Medication</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

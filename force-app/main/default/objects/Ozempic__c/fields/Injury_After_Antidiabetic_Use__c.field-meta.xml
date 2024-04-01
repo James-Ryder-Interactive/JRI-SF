@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Injury_After_Antidiabetic_Use__c</fullName>
+    <externalId>false</externalId>
+    <label>Injury After Antidiabetic Use</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Overnight hospitalization for gastrointestinal problem</fullName>
+                <default>false</default>
+                <label>Overnight hospitalization for gastrointestinal problem</label>
+            </value>
+            <value>
+                <fullName>2 or more ER visits for gastrointestinal problem in a 2 month time period</fullName>
+                <default>false</default>
+                <label>2 or more ER visits for gastrointestinal problem in a 2 month time period</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

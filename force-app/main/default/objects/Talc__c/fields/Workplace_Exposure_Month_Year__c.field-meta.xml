@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Workplace_Exposure_Month_Year__c</fullName>
+    <description>What month and year were you exposed to Cyprus and/or Imerys Industrial Talcum Powder?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What month and year were you exposed to Cyprus and/or Imerys Industrial Talcum Powder?</inlineHelpText>
+    <label>Workplace Exposure Month and Year</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

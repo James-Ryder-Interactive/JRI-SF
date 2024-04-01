@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location_At_Camp_Lejeune__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Where did you live or work while at Camp Lejeune:</inlineHelpText>
+    <label>Location At Camp Lejeune</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Barracks</fullName>
+                <default>false</default>
+                <label>Barracks</label>
+            </value>
+            <value>
+                <fullName>Montford Point/Camp Johnson</fullName>
+                <default>false</default>
+                <label>Montford Point/Camp Johnson</label>
+            </value>
+            <value>
+                <fullName>Paradise Point</fullName>
+                <default>false</default>
+                <label>Paradise Point</label>
+            </value>
+            <value>
+                <fullName>Courthouse Bay</fullName>
+                <default>false</default>
+                <label>Courthouse Bay</label>
+            </value>
+            <value>
+                <fullName>Watkins Village</fullName>
+                <default>false</default>
+                <label>Watkins Village</label>
+            </value>
+            <value>
+                <fullName>Midway Park</fullName>
+                <default>false</default>
+                <label>Midway Park</label>
+            </value>
+            <value>
+                <fullName>Knox Trailer Park</fullName>
+                <default>false</default>
+                <label>Knox Trailer Park</label>
+            </value>
+            <value>
+                <fullName>New River</fullName>
+                <default>false</default>
+                <label>New River</label>
+            </value>
+            <value>
+                <fullName>Onslow Beach</fullName>
+                <default>false</default>
+                <label>Onslow Beach</label>
+            </value>
+            <value>
+                <fullName>French Creek</fullName>
+                <default>false</default>
+                <label>French Creek</label>
+            </value>
+            <value>
+                <fullName>Tarawa Terrace</fullName>
+                <default>false</default>
+                <label>Tarawa Terrace</label>
+            </value>
+            <value>
+                <fullName>Berkeley Manor</fullName>
+                <default>false</default>
+                <label>Berkeley Manor</label>
+            </value>
+            <value>
+                <fullName>Camp Geiger</fullName>
+                <default>false</default>
+                <label>Camp Geiger</label>
+            </value>
+            <value>
+                <fullName>Mainside Barracks</fullName>
+                <default>false</default>
+                <label>Mainside Barracks</label>
+            </value>
+            <value>
+                <fullName>Hospital Point</fullName>
+                <default>false</default>
+                <label>Hospital Point</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

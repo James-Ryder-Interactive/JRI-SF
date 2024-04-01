@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exposure_To_Contaminated_Water__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Were you exposed to contaminated drinking water at Camp Lejeune for 30 or more days between August 1, 1953, and December 31, 1987?</inlineHelpText>
+    <label>Exposure To Contaminated Water</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No (DNQ)</fullName>
+                <default>false</default>
+                <label>No (DNQ)</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

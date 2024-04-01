@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Cardiac_Birth_Defect__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>What type of cardiac birth defect were you diagnosed with?</inlineHelpText>
+    <label>Type of Cardiac Birth Defect</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anomalous pulmonary venous return</fullName>
+                <default>false</default>
+                <label>Anomalous pulmonary venous return</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

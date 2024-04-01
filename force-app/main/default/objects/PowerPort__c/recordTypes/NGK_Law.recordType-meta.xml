@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NGK_Law</fullName>
+    <active>true</active>
+    <label>NGK Law</label>
+    <picklistValues>
+        <picklist>Are_you_represented_by_an_attorney__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes %28DNQ%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Call_Outcome__c</picklist>
+        <values>
+            <fullName>Qualified - Retainer Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Calling_for_yourself_or_someone_else__c</picklist>
+        <values>
+            <fullName>Myself</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Can_we_send_you_a_text_message__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Did_the_catheter_or_implanted_port__c</picklist>
+        <values>
+            <fullName>Arrhythmia more than 90 days after implant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blood clots more than 90 days after implant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Break</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broken pieces embedded in artery%2Forgan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broken pieces passed through the heart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broken pieces perforated a vein or organ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardiac puncture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardiac%2Fpericardial tamponade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Death</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dislodgement or disconnection of the catheter from the port</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fracture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fracture causing embolism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hematoma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hemorrhage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infection more then 90 days after implant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laceration to blood vessels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leakage at port site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Necrosis around the port</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Injured %28DNQ%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Injury not listed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Severe and persistent pain around port%2Fcatheter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thromboembolic event more the 90 days after implant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Did_the_conversation_take_place_in__c</picklist>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Do_you_still_have_a_port__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Document_Authority_to_Represent_Injured__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Does_qualify__c</picklist>
+        <values>
+            <fullName>DNQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Is Qualified</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>E_Signature_or_Mail_Out_Request__c</picklist>
+        <values>
+            <fullName>E-signature</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_Angiodynamics__c</picklist>
+        <values>
+            <fullName>BioFlo Port</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_B_Braun_Medical__c</picklist>
+        <values>
+            <fullName>Celsite Port</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_Bard__c</picklist>
+        <values>
+            <fullName>BardPort</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_Cook_Medical__c</picklist>
+        <values>
+            <fullName>Vascular Vital-Port</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_Covidien__c</picklist>
+        <values>
+            <fullName>ChemoSite Port</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_MedComp__c</picklist>
+        <values>
+            <fullName>Dignity Port</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_Smiths_Medical__c</picklist>
+        <values>
+            <fullName>P%2EA%2ES%2E Port</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>If_Teleflex__c</picklist>
+        <values>
+            <fullName>Arrow Polysite Port</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Implantable_Port_Surgery__c</picklist>
+        <values>
+            <fullName>Loved One</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Myself</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No %28DNQ%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>In_what_year_was_the_port_implanted__c</picklist>
+        <values>
+            <fullName>After 2006</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Before 2006</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_it_a_new_port_or_the_same_as_before__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Same as before</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_the_Injured_Party_Deceased__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_the_Injured_Party_a_Minor__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_the_person_that_had_this_port_living__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Multiple_ports_implanted_and_removed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>New_or_Existing_Client__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Number_of_ports_implanted_removed__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Port_Complications__c</picklist>
+        <values>
+            <fullName>Break</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catheter Fracture</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Port_implanted_in_body__c</picklist>
+        <values>
+            <fullName>No %28DNQ%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Qualified_or_disqualified__c</picklist>
+        <values>
+            <fullName>Qualified</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Records_for_port_model__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes- can you provide a scan of this%3F</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relationship_Deceased_Party__c</picklist>
+        <values>
+            <fullName>Executor of the Estate %28Person listed in the Will%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relationship_Minor_Party__c</picklist>
+        <values>
+            <fullName>Parent%2FGuardian</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Signed_with_Attorney__c</picklist>
+        <values>
+            <fullName>No%2C never signed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%2C but disengaged in writing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Treatment_for_your_injury__c</picklist>
+        <values>
+            <fullName>Hospitalization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surgery</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_port_catheter__c</picklist>
+        <values>
+            <fullName>Angiodynamics%2FNavilyst BioFlo Port</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angiodynamics%2FNavilyst SmartPort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angiodynamics%2FNavilyst SmartPort CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angiodynamics%2FNavilyst Vaxcel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angiodynamics%2FNavilyst Vortex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angiodynamics%2FNavilyst Xcela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B%2E Braun Medical Celsite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bard Groshong%C2%A9 Catheter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bard MRI Ports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bard PowerPort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bard SlimPort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bard Titanium Low-Profile Port</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bard Vaccess CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bard X-Port ISP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BardPort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cook Vascular Vital-Port</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Covidien Chemosite Port</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MedComp Dignity Port</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MedComp Profuse Port</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other%2FUnknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smiths Deltec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smiths Medical P%2EA%2ES%2E Port</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smiths Medical Port-a-Cath</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smiths Medical Power P%2EA%2EC%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teleflex Arrow CVC Kit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Verbal_Permission_for_Representation__c</picklist>
+        <values>
+            <fullName>Verbal permission given</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Was_your_port_replaced_or_removed__c</picklist>
+        <values>
+            <fullName>No %28DNQ%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

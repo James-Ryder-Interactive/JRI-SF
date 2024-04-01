@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_diagnosed_lung_cancer__c</fullName>
+    <description>Approximately when were you first diagnosed with lung cancer?*</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Approximately when were you first diagnosed with lung cancer?*</inlineHelpText>
+    <label>First diagnosed - lung cancer</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

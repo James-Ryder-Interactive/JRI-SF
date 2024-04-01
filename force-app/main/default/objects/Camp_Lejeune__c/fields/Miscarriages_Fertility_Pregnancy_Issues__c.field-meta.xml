@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Miscarriages_Fertility_Pregnancy_Issues__c</fullName>
+    <description>If applicable, please indicate how many miscarriages result and when or any other fertility / pregnancy  issues or infant injuries along with dates from the previous question</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If applicable, please indicate how many miscarriages result and when or any other fertility / pregnancy  issues or infant injuries along with dates from the previous question</inlineHelpText>
+    <label>Miscarriages, Fertility/Pregnancy Issues</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Usage_Before_Diagnosis__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>How long did you use Johnsons Baby powder or Shower to Shower in your genital  area before you were diagnosed?</inlineHelpText>
+    <label>Product Usage Before Diagnosis</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>At least 4 years</fullName>
+                <default>false</default>
+                <label>At least 4 years</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

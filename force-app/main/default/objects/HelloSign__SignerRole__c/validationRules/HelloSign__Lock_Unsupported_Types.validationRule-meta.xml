@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Lock_Unsupported_Types</fullName>
+    <active>true</active>
+    <description>Validation rule that returns an error message. Prevents user from enabling Is Locked on the record if the Role Type cannot target a specific contact or user in the system.</description>
+    <errorConditionFormula>(text(HelloSign__RoleType__c) = &apos;Select Account Contact&apos;
+    || text(HelloSign__RoleType__c) = &apos;Select Parent Account User&apos;
+    || text(HelloSign__RoleType__c) = &apos;Select Parent Account Contact&apos;
+    || text(HelloSign__RoleType__c) = &apos;Specific Contact&apos;
+    || text(HelloSign__RoleType__c) = &apos;Specific User&apos;)
+&amp;&amp; HelloSign__IsLocked__c = TRUE</errorConditionFormula>
+    <errorMessage>The type you&apos;ve selected does not currently support the locked option because we cannot detect a specific contact or user.</errorMessage>
+</ValidationRule>

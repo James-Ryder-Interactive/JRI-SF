@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Awaiting_Signature</fullName>
+    <columns>NAME</columns>
+    <columns>HelloSign__Document_Name__c</columns>
+    <columns>HelloSign__Template__c</columns>
+    <columns>HelloSign__Latest_Action__c</columns>
+    <columns>HelloSign__Total_Signers__c</columns>
+    <columns>HelloSign__Completed_Signers__c</columns>
+    <columns>HelloSign__Remaining_Signers__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>HelloSign__Message2__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>HelloSign__Latest_Action__c</field>
+        <operation>equals</operation>
+        <value>Awaiting Signature</value>
+    </filters>
+    <label>Awaiting Signature</label>
+</ListView>

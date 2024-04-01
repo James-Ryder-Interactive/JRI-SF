@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Injured_Party_Affiliation__c</fullName>
+    <externalId>false</externalId>
+    <label>Injured Party Affiliation</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Military Veteran</fullName>
+                <default>false</default>
+                <label>Military Veteran</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

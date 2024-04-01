@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Worked_or_Lived_on_a_Military_Base__c</fullName>
+    <externalId>false</externalId>
+    <label>Worked or Lived on a Military Base</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Worked on military base</fullName>
+                <default>false</default>
+                <label>Worked on military base</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

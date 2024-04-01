@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Received_email_or_letter__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Please confirm that you received an email or letter in which your former lawyer acknowledged that they no longer represent you. I will need a copy of that email/letter uploaded at the end of this conversation in order for our firm to represent you. Will you be able to provide that?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please confirm that you received an email or letter in which your former lawyer acknowledged that they no longer represent you. I will need a copy of that email/letter uploaded at the end of this conversation in order for our firm to represent you. Will you be able to provide that?</inlineHelpText>
+    <label>Received an email or letter?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

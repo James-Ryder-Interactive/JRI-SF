@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Your_relation_to_the_injured__c</fullName>
+    <description>What is your relationship to the Injured Party?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is your relationship to the Injured Party?</inlineHelpText>
+    <label>Your relation to the injured</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

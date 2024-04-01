@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>JRI - Camp Lejuene</label>
+    <protected>false</protected>
+    <values>
+        <field>Access_Token__c</field>
+        <value xsi:type="xsd:string">EAAJyohiQ73sBO4VkBk3kk0AzlvYSGYKA5yMA27Ior9kdwDvGCQbv1cdEtxZCG7tdK3caVLcZCpzfVqYqEvVyrQ0A7ZAj2Hd0e9YiG2m8IrZAQfwFcpl9UmRl3ciG8lqIJptVj0BBR0EfDZBHLKAtgmBIOx0YfwWKGfjtGGSaZAuL5dG6nfZA4XLOfZBa44ZACCmKuZCgZDZD</value>
+    </values>
+    <values>
+        <field>Pixel_ID__c</field>
+        <value xsi:type="xsd:string">761655818777974</value>
+    </values>
+</CustomMetadata>

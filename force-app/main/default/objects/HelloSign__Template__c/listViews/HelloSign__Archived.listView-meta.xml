@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Archived</fullName>
+    <columns>NAME</columns>
+    <columns>HelloSign__SourceObject__c</columns>
+    <columns>HelloSign__Status__c</columns>
+    <columns>HelloSign__Title__c</columns>
+    <columns>HelloSign__Message2__c</columns>
+    <columns>HelloSign__TotalSignerRoles__c</columns>
+    <columns>HelloSign__AllowReassign__c</columns>
+    <columns>HelloSign__AllowAdditionalFiles__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>HelloSign__Status__c</field>
+        <operation>equals</operation>
+        <value>Archived</value>
+    </filters>
+    <label>Archived</label>
+</ListView>

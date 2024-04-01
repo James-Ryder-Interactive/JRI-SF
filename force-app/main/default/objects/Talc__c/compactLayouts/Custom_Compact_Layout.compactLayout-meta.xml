@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>New_or_Existing_Client__c</fields>
+    <fields>Your_Gender__c</fields>
+    <fields>Calling_for_yourself_or_someone_else__c</fields>
+    <fields>Injureds_Full_Legal_Name__c</fields>
+    <fields>Best_number_to_reach_you_at__c</fields>
+    <fields>Is_Injured_deceased__c</fields>
+    <fields>Cell_phone_or_landline__c</fields>
+    <label>Custom Compact Layout</label>
+</CompactLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Military_Family_Member_Full_Name__c</fullName>
+    <description>If military family member, please state the full name of the individual or family member who was stationed on base.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If military family member, please state the full name of the individual or family member who was stationed on base.</inlineHelpText>
+    <label>Military Family Member Full Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

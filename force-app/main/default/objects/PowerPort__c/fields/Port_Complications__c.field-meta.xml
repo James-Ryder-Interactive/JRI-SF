@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Port_Complications__c</fullName>
+    <description>Type of complication(s) You experienced from implanted  port:</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Type of complication(s) You experienced from implanted  port:</inlineHelpText>
+    <label>Port Complications</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Break</fullName>
+                <default>false</default>
+                <label>Break</label>
+            </value>
+            <value>
+                <fullName>Catheter Fracture</fullName>
+                <default>false</default>
+                <label>Catheter Fracture</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

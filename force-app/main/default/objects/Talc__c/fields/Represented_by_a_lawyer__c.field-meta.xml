@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Represented_by_a_lawyer__c</fullName>
+    <description>The next important thing we need to know is if you are currently represented by another lawyer in connection with this case. If you are, we are not allowed to talk to you. Additionally, having multiple lawyers will cause issues for you during the claim process. Are you currently represented by a lawyer in connection with your use of talcum powder?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The next important thing we need to know is if you are currently represented by another lawyer in connection with this case. If you are, we are not allowed to talk to you. Additionally, having multiple lawyers will cause issues for you during the claim process. Are you currently represented by a lawyer in connection with your use of talcum powder?</inlineHelpText>
+    <label>Represented by a lawyer?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes (DNQ)</fullName>
+                <default>false</default>
+                <label>Yes (DNQ)</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Unsure (DNQ)</fullName>
+                <default>false</default>
+                <label>Unsure (DNQ)</label>
+            </value>
+            <value>
+                <fullName>Previously had an attorney</fullName>
+                <default>false</default>
+                <label>Previously had an attorney</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

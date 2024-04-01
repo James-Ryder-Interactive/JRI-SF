@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hospital_where_diagnosed_Fallopian__c</fullName>
+    <description>What is the name of the hospital/facility where [say you/other name here] were diagnosed with fallopian tube cancer?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the name of the hospital/facility where [say you/other name here] were diagnosed with fallopian tube cancer?</inlineHelpText>
+    <label>Hospital where diagnosed Fallopian</label>
+    <length>12768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

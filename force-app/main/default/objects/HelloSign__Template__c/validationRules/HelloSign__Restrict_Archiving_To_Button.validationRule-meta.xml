@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Restrict_Archiving_To_Button</fullName>
+    <active>true</active>
+    <description>Validation rule that returns an error message. Prevents direct archiving in Salesforce without using the button to remove the template from Dropbox Sign as well.</description>
+    <errorConditionFormula>HelloSign__Status__c = &apos;Archived&apos; &amp;&amp; NOT(HelloSign__Allow_Archiving__c)</errorConditionFormula>
+    <errorMessage>Templates must be archived using the &quot;Archive Template&quot; button.</errorMessage>
+</ValidationRule>

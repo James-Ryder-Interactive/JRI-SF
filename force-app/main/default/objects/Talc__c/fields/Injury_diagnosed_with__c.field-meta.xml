@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Injury_diagnosed_with__c</fullName>
+    <description>First, I want to make sure that you have an injury that we believe is caused by exposure to talcum powder so that we can help you. What injury were you diagnosed with? *</description>
+    <externalId>false</externalId>
+    <inlineHelpText>First, I want to make sure that you have an injury that we believe is caused by exposure to talcum powder so that we can help you. What injury were you diagnosed with? *</inlineHelpText>
+    <label>Injury diagnosed with?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Other</fullName>
+                <default>true</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Breast Cancer (DNQ)</fullName>
+                <default>false</default>
+                <label>Breast Cancer (DNQ)</label>
+            </value>
+            <value>
+                <fullName>Uterine Cancer</fullName>
+                <default>false</default>
+                <label>Uterine Cancer</label>
+            </value>
+            <value>
+                <fullName>Ovarian Cancer</fullName>
+                <default>false</default>
+                <label>Ovarian Cancer</label>
+            </value>
+            <value>
+                <fullName>Vaginal Cancer</fullName>
+                <default>false</default>
+                <label>Vaginal Cancer</label>
+            </value>
+            <value>
+                <fullName>Lung Cancer (DNQ)</fullName>
+                <default>false</default>
+                <label>Lung Cancer (DNQ)</label>
+            </value>
+            <value>
+                <fullName>Endometrial Cancer</fullName>
+                <default>false</default>
+                <label>Endometrial Cancer</label>
+            </value>
+            <value>
+                <fullName>Fallopian Tube Cancer</fullName>
+                <default>false</default>
+                <label>Fallopian Tube Cancer</label>
+            </value>
+            <value>
+                <fullName>Mesothelioma</fullName>
+                <default>false</default>
+                <label>Mesothelioma</label>
+            </value>
+            <value>
+                <fullName>Uterine Fibroid (DNQ)</fullName>
+                <default>false</default>
+                <label>Uterine Fibroid (DNQ)</label>
+            </value>
+            <value>
+                <fullName>Cervical Cancer</fullName>
+                <default>false</default>
+                <label>Cervical Cancer</label>
+            </value>
+            <value>
+                <fullName>Vulvar Cancer</fullName>
+                <default>false</default>
+                <label>Vulvar Cancer</label>
+            </value>
+            <value>
+                <fullName>Hysterectomy (DNQ)</fullName>
+                <default>false</default>
+                <label>Hysterectomy (DNQ)</label>
+            </value>
+            <value>
+                <fullName>Primary Peritoneal Cancer</fullName>
+                <default>false</default>
+                <label>Primary Peritoneal Cancer</label>
+            </value>
+            <value>
+                <fullName>Carcinosarcoma</fullName>
+                <default>false</default>
+                <label>Carcinosarcoma</label>
+            </value>
+            <value>
+                <fullName>Endometriosis (DNQ)</fullName>
+                <default>false</default>
+                <label>Endometriosis (DNQ)</label>
+            </value>
+            <value>
+                <fullName>Omentum Cancer</fullName>
+                <default>false</default>
+                <label>Omentum Cancer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

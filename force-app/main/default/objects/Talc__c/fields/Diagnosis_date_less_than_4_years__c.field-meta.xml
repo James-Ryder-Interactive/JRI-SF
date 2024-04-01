@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Diagnosis_date_less_than_4_years__c</fullName>
+    <description>Was the diagnosis date less than four years after initial use?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Was the diagnosis date less than four years after initial use?</inlineHelpText>
+    <label>Diagnosis date less than 4 years?</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

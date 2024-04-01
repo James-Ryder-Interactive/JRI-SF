@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Order__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Numeric field on the signer attachment custom object. Stores the numerical placement of the attachment if they are in order on the request.</description>
+    <externalId>false</externalId>
+    <label>Order</label>
+    <precision>1</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

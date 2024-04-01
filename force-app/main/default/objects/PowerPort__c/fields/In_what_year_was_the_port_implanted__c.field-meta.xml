@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_what_year_was_the_port_implanted__c</fullName>
+    <description>In what year was the port implanted? (If answer is After 2006. Write the specific year?)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>In what year was the port implanted? (If answer is After 2006. Write the specific year?)</inlineHelpText>
+    <label>In what year was the port implanted?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Before 2006</fullName>
+                <default>false</default>
+                <label>Before 2006</label>
+            </value>
+            <value>
+                <fullName>After 2006</fullName>
+                <default>false</default>
+                <label>After 2006</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

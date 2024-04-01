@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Send_Reminder</fullName>
+    <availability>online</availability>
+    <description>Clickable button on the Signature Request record to request reminders for the request</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Send Reminder</masterLabel>
+    <openType>noSidebar</openType>
+    <protected>false</protected>
+    <url>/apex/HelloSign__HSignVfTemplateUtility?requestid={!HelloSign__HelloSign_Signature_Request__c.Id}&amp;requestaction=reminder</url>
+</WebLink>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__HelloSign_Signature_Request__c</fullName>
+    <deprecated>false</deprecated>
+    <description>String field on the signature request detail record. Stores the Id of the parent record.</description>
+    <externalId>false</externalId>
+    <label>Dropbox Sign Signature Request</label>
+    <referenceTo>HelloSign__HelloSign_Signature_Request__c</referenceTo>
+    <relationshipLabel>Dropbox Sign Signature Request Details</relationshipLabel>
+    <relationshipName>HelloSign_Document_Status_Details</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

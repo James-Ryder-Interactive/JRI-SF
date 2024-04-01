@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Treatment_Facility_Information__c</fullName>
+    <description>Please list all treatment facility names and addresses</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please list all treatment facility names and addresses</inlineHelpText>
+    <label>Treatment Facility Information</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

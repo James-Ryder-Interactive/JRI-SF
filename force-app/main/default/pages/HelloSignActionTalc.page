@@ -1,0 +1,2 @@
+<apex:page standardController="Talc__c" extensions="HelloSign.HSignActionExtension" action="{!action}">
+</apex:page>

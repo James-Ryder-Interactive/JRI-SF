@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chemotherapy_Treatment_Information__c</fullName>
+    <externalId>false</externalId>
+    <label>Chemotherapy Treatment Information</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Injection</fullName>
+                <default>false</default>
+                <label>Injection</label>
+            </value>
+            <value>
+                <fullName>Intraperitoneal</fullName>
+                <default>false</default>
+                <label>Intraperitoneal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

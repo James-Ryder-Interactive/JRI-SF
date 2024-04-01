@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Substance_Use_During_Pregnancy__c</fullName>
+    <description>Did any of the following apply to you during your pregnancy?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Did any of the following apply to you during your pregnancy?</inlineHelpText>
+    <label>Substance Use During Pregnancy</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Did you use one or more SSRI drugs (DNQ)</fullName>
+                <default>false</default>
+                <label>Did you use one or more SSRI drugs (DNQ)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__TotalSignerRoles__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Number field on the Template custom object. The number of related signer roles.</description>
+    <externalId>false</externalId>
+    <label>Total Signer Roles</label>
+    <summaryForeignKey>HelloSign__SignerRole__c.HelloSign__Template__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

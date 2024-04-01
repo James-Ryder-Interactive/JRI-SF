@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Injured_Party_s_phone_number__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Their phone number</inlineHelpText>
+    <label>Injured Party&apos;s phone number</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Phone</type>
+</CustomField>

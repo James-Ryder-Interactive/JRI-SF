@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_port_catheter__c</fullName>
+    <description>Do you know the type of port catheter that was implanted?:</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Do you know the type of port catheter that was implanted?:</inlineHelpText>
+    <label>Type of port catheter</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BardPort</fullName>
+                <default>false</default>
+                <label>BardPort</label>
+            </value>
+            <value>
+                <fullName>Bard PowerPort</fullName>
+                <default>false</default>
+                <label>Bard PowerPort</label>
+            </value>
+            <value>
+                <fullName>Bard SlimPort</fullName>
+                <default>false</default>
+                <label>Bard SlimPort</label>
+            </value>
+            <value>
+                <fullName>Bard MRI Ports</fullName>
+                <default>false</default>
+                <label>Bard MRI Ports</label>
+            </value>
+            <value>
+                <fullName>Bard Groshong© Catheter</fullName>
+                <default>false</default>
+                <label>Bard Groshong© Catheter</label>
+            </value>
+            <value>
+                <fullName>Bard Titanium Low-Profile Port</fullName>
+                <default>false</default>
+                <label>Bard Titanium Low-Profile Port</label>
+            </value>
+            <value>
+                <fullName>Bard Vaccess CT</fullName>
+                <default>false</default>
+                <label>Bard Vaccess CT</label>
+            </value>
+            <value>
+                <fullName>Bard X-Port ISP</fullName>
+                <default>false</default>
+                <label>Bard X-Port ISP</label>
+            </value>
+            <value>
+                <fullName>Angiodynamics/Navilyst BioFlo Port</fullName>
+                <default>false</default>
+                <label>Angiodynamics/Navilyst BioFlo Port</label>
+            </value>
+            <value>
+                <fullName>Angiodynamics/Navilyst SmartPort</fullName>
+                <default>false</default>
+                <label>Angiodynamics/Navilyst SmartPort</label>
+            </value>
+            <value>
+                <fullName>Angiodynamics/Navilyst SmartPort CT</fullName>
+                <default>false</default>
+                <label>Angiodynamics/Navilyst SmartPort CT</label>
+            </value>
+            <value>
+                <fullName>Angiodynamics/Navilyst Vaxcel</fullName>
+                <default>false</default>
+                <label>Angiodynamics/Navilyst Vaxcel</label>
+            </value>
+            <value>
+                <fullName>Angiodynamics/Navilyst Vortex</fullName>
+                <default>false</default>
+                <label>Angiodynamics/Navilyst Vortex</label>
+            </value>
+            <value>
+                <fullName>Angiodynamics/Navilyst Xcela</fullName>
+                <default>false</default>
+                <label>Angiodynamics/Navilyst Xcela</label>
+            </value>
+            <value>
+                <fullName>Smiths Deltec</fullName>
+                <default>false</default>
+                <label>Smiths Deltec</label>
+            </value>
+            <value>
+                <fullName>Smiths Medical P.A.S. Port</fullName>
+                <default>false</default>
+                <label>Smiths Medical P.A.S. Port</label>
+            </value>
+            <value>
+                <fullName>Smiths Medical Port-a-Cath</fullName>
+                <default>false</default>
+                <label>Smiths Medical Port-a-Cath</label>
+            </value>
+            <value>
+                <fullName>Smiths Medical Power P.A.C.</fullName>
+                <default>false</default>
+                <label>Smiths Medical Power P.A.C.</label>
+            </value>
+            <value>
+                <fullName>MedComp Dignity Port</fullName>
+                <default>false</default>
+                <label>MedComp Dignity Port</label>
+            </value>
+            <value>
+                <fullName>MedComp Profuse Port</fullName>
+                <default>false</default>
+                <label>MedComp Profuse Port</label>
+            </value>
+            <value>
+                <fullName>B. Braun Medical Celsite</fullName>
+                <default>false</default>
+                <label>B. Braun Medical Celsite</label>
+            </value>
+            <value>
+                <fullName>Cook Vascular Vital-Port</fullName>
+                <default>false</default>
+                <label>Cook Vascular Vital-Port</label>
+            </value>
+            <value>
+                <fullName>Covidien Chemosite Port</fullName>
+                <default>false</default>
+                <label>Covidien Chemosite Port</label>
+            </value>
+            <value>
+                <fullName>Teleflex Arrow CVC Kit</fullName>
+                <default>false</default>
+                <label>Teleflex Arrow CVC Kit</label>
+            </value>
+            <value>
+                <fullName>Other/Unknown</fullName>
+                <default>false</default>
+                <label>Other/Unknown</label>
+            </value>
+            <value>
+                <fullName>Bard</fullName>
+                <default>false</default>
+                <label>Bard</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

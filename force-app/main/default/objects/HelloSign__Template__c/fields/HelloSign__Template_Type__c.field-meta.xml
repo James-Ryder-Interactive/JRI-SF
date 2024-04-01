@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Template_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Dropdown field on the Template custom object. Either &quot;External&quot; (documents generated outside of Dropbox Sign to be sent via Sign) or &quot;Salesforce&quot; (Dropbox-Sign-generated documents).</description>
+    <externalId>false</externalId>
+    <label>Template Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>External</fullName>
+                <default>false</default>
+                <label>External</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

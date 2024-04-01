@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pharmacy_Information__c</fullName>
+    <description>Please list all pharmacy names and addresses where perscriptions were filled</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please list all pharmacy names and addresses where perscriptions were filled</inlineHelpText>
+    <label>Pharmacy Information</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__RoleType__c</fullName>
+    <deprecated>false</deprecated>
+    <description>String field on the SignerRole__c custom object. Stores the selectable type of role.  Related or Specific role types require an additional field to be entered.</description>
+    <externalId>false</externalId>
+    <label>Role Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Select System Contact</fullName>
+                <default>false</default>
+                <label>Select System Contact</label>
+            </value>
+            <value>
+                <fullName>Select Account Contact</fullName>
+                <default>true</default>
+                <label>Select Account Contact</label>
+            </value>
+            <value>
+                <fullName>Select Opportunity Contact</fullName>
+                <default>false</default>
+                <label>Select Opportunity Contact</label>
+            </value>
+            <value>
+                <fullName>Select Salesforce User</fullName>
+                <default>false</default>
+                <label>Select Salesforce User</label>
+            </value>
+            <value>
+                <fullName>Specific Contact</fullName>
+                <default>false</default>
+                <label>Specific Contact</label>
+            </value>
+            <value>
+                <fullName>Specific User</fullName>
+                <default>false</default>
+                <label>Specific User</label>
+            </value>
+            <value>
+                <fullName>Specific Email</fullName>
+                <default>false</default>
+                <label>Specific Email</label>
+            </value>
+            <value>
+                <fullName>Related Contact</fullName>
+                <default>false</default>
+                <label>Related Contact</label>
+            </value>
+            <value>
+                <fullName>Related User</fullName>
+                <default>false</default>
+                <label>Related User</label>
+            </value>
+            <value>
+                <fullName>Running User</fullName>
+                <default>false</default>
+                <label>Running User</label>
+            </value>
+            <value>
+                <fullName>Parent Account Contact</fullName>
+                <default>false</default>
+                <label>Parent Account Contact</label>
+            </value>
+            <value>
+                <fullName>Parent Account User</fullName>
+                <default>false</default>
+                <label>Parent Account User</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

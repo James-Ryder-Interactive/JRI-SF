@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_time_product_applied__c</fullName>
+    <description>When was the Last time that you applied Johnson’s® Baby Powder or Shower to Shower® to the genital area?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When was the Last time that you applied Johnson’s® Baby Powder or Shower to Shower® to the genital area?</inlineHelpText>
+    <label>Last time product applied</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

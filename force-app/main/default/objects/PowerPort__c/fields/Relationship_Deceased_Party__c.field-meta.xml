@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relationship_Deceased_Party__c</fullName>
+    <externalId>false</externalId>
+    <label>Relationship - Deceased Party</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Executor of the Estate (Person listed in the Will)</fullName>
+                <default>false</default>
+                <label>Executor of the Estate (Person listed in the Will)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

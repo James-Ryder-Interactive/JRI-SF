@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verbal_Permission_for_Representation__c</fullName>
+    <externalId>false</externalId>
+    <label>Verbal Permission for Representation</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Verbal permission given</fullName>
+                <default>false</default>
+                <label>Verbal permission given</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

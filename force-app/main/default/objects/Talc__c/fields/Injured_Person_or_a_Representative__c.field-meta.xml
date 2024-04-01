@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Injured_Person_or_a_Representative__c</fullName>
+    <description>Are you the Injured Person or a Representative?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Are you the Injured Person or a Representative?</inlineHelpText>
+    <label>Injured Person or a Representative?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Injured Person</fullName>
+                <default>false</default>
+                <label>Injured Person</label>
+            </value>
+            <value>
+                <fullName>Representative</fullName>
+                <default>false</default>
+                <label>Representative</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

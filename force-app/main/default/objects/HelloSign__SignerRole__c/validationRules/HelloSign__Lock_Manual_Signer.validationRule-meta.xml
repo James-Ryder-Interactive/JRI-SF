@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelloSign__Lock_Manual_Signer</fullName>
+    <active>true</active>
+    <description>Validation rule that returns an error message. Locking type Manual requires a default First and Last name, and a valid email.</description>
+    <errorConditionFormula>text(HelloSign__RoleType__c) = &apos;Specific Email&apos;
+&amp;&amp; (ISBLANK(TRIM(HelloSign__SpecificEmail__c))
+    || ISBLANK(TRIM(HelloSign__SpecificFirstName__c)))
+&amp;&amp; HelloSign__IsLocked__c = true</errorConditionFormula>
+    <errorMessage>Locking the manual option requires a first name, last name, and email.</errorMessage>
+</ValidationRule>

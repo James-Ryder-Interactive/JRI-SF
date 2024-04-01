@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location_of_Miscarriage_Treatment__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Agent Facing Question Is the facility where the miscarriage was treated on Camp Lejeune or in Jacksonville, North Carolina?</inlineHelpText>
+    <label>Location of Miscarriage Treatment</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
