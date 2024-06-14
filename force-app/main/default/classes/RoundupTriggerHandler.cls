@@ -21,18 +21,18 @@ public class RoundupTriggerHandler {
                 Lead__r.Phone, Lead__r.Address, Lead__r.Street, Lead__r.City, Lead__r.State, Lead__r.Country, Lead__r.PostalCode,
                 Employer_City__c, Employer_State__c, Employer_Zip__c, Treatment_Provider_City__c, Treatment_Provider_State__c, Treatment_Provider_Zip__c,
                 Surgeon_City__c, Surgeon_State__c, Surgeon_Zip__c, Oncologist_City__c, Oncologist_State__c, Oncologist_Zip__c, PCP_State__c, PCP_City__c, PCP_Zip__c,
-                Additional_Medical_History__c, Lead__r.SSN__c FROM Roundup__c WHERE Id = :recordId];
+                Additional_Medical_History__c, Lead__r.SSN__c, Company__c FROM Roundup__c WHERE Id = :recordId];
         
         Lead relatedLead = [Select Id, Name from Lead where Id = :newRecord[0].Lead__c];
     	List<Object> roundupModels = SmartAdvocateModel.mapToSmartAdvocateFields(newRecord);
     	String smartAdvocateModelJson = JSON.serialize(roundupModels[0]);
-
+        
     	// Asynchronously send data to the external system
         sendLeadDataWithDelay(smartAdvocateModelJson, relatedLead.Id);
    }
     
     public static void sendLeadDataWithDelay(String smartAdvocateModelJson, String leadId) {
-        System.debug('Uslo u sendLeadDataWithDelay');
+
         // Introduce a delay before calling sendLeadDataAsync
         String year = String.valueOf(Datetime.now().year());
         String month = Datetime.now().format('MMM').toUpperCase();

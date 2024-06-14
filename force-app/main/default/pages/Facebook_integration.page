@@ -1,9 +1,0 @@
-<apex:page controller="testfbpage1" title="read data from FB Page">
-  <!-- Begin Default Content REMOVE THIS -->
-  <apex:pageBlock title="Facebook Page Details">
-<apex:outputText value="{!id1}">Page Id:  </apex:outputText>/>
-<apex:outputText value="{!name1}">Page Name:  </apex:outputText>/>
-<apex:outputText value="{!website1}">Page Website:  </apex:outputText>/>
-<apex:outputText value="{!fancount1}">Page Fancount:  </apex:outputText>/>
-</apex:pageBlock>
-</apex:page>
