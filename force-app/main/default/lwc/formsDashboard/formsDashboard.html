@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Available Forms">
+        <ul>
+            <template for:each={forms} for:item="form">
+                <li key={form.id}>
+                    <lightning-button label={form.name} data-url={form.url} onclick={navigateToForm}></lightning-button>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>
