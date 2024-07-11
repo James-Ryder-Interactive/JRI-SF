@@ -1,5 +1,5 @@
 @isTest
-public class sendSignatureReequestWithTemplateTest {
+public class SendSignatureRequestWithTemplateTest {
     @isTest
     static void testGenerateHelloSignature() {
         // Create a test HelloSign__Template__c record
@@ -37,7 +37,7 @@ public class sendSignatureReequestWithTemplateTest {
 
         Test.startTest();
         // Call the method with the test data
-        sendSignatureReequestWithTemplate.generateHelloSignature('test@example.com', 'Test', talcObject.Id);
+        SendSignatureRequestWithTemplate.generateHelloSignature('test@example.com', 'Test', talcObject.Id);
         Test.stopTest();
     }
 }
