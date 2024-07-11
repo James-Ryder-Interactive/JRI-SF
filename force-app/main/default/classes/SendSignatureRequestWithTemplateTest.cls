@@ -37,7 +37,7 @@ public class SendSignatureRequestWithTemplateTest {
 
         Test.startTest();
         // Call the method with the test data
-        sendSignatureReequestWithTemplate.generateHelloSignature('test@example.com', 'Test', talcObject.Id);
+        SendSignatureRequestWithTemplate.generateHelloSignature('test@example.com', 'Test', talcObject.Id);
         Test.stopTest();
     }
 }
