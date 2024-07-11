@@ -1,4 +1,4 @@
-public class sendSignatureReequestWithTemplate {
+public class SendSignatureRequestWithTemplate {
     
     public static void generateHelloSignature(String email, String name, Id talcId){
         Id sfdcTemplateId = [SELECT Id FROM HelloSign__Template__c WHERE Name = 'Saddle Rock- Talcum Powder- Please sign'][0]?.Id;

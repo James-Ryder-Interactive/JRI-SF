@@ -1,5 +1,5 @@
 @isTest
-public class sendSignatureReequestWithTemplateTest {
+public class SendSignatureRequestWithTemplateTest {
     @isTest
     static void testGenerateHelloSignature() {
         // Create a test HelloSign__Template__c record
