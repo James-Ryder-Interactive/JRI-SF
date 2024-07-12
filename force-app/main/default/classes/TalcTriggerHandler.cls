@@ -32,7 +32,7 @@ public class TalcTriggerHandler {
         List <Lead> leadRec = [SELECT Id, Email, Name, Company__c, Campaign__c FROM Lead WHERE Id IN (SELECT Lead__c FROM Talc__c WHERE Id = :recordId) AND Company__r.Name = 'Saddle Rock' AND Campaign__r.Name = 'Talc'];
         
         if(leadRec != null && !leadRec.isEmpty()) {
-        	SendSignatureRequestWithTemplate.generateHelloSignature(leadRec[0].Email, leadRec[0].Name, recordId);
+        	SendSignatureRequestWithTemplate.generateHelloSignature(leadRec[0].Email, leadRec[0].Name, recordId, 'Saddle Rock- Talcum Powder- Please sign');
         }
     }
 }
