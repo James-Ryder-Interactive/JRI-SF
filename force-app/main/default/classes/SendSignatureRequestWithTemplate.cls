@@ -1,6 +1,6 @@
 public class SendSignatureRequestWithTemplate {
     
-    public static void generateHelloSignature(String email, String name, Id talcId, String templateName){
+    public static void generateHelloSignature(String email, String name, Id recordId, String templateName){
         Id sfdcTemplateId = [SELECT Id FROM HelloSign__Template__c WHERE Name = :templateName][0]?.Id;
         
         List<HelloSign__SignerRole__c> role = [
@@ -18,7 +18,7 @@ public class SendSignatureRequestWithTemplate {
           new List<HelloSign.SendWithTemplate.SendObject>();
         
         HelloSign.SendWithTemplate.SendObject so = 
-          new HelloSign.SendWithTemplate.SendObject(talcId, sfdcTemplateId);
+          new HelloSign.SendWithTemplate.SendObject(recordId, sfdcTemplateId);
         sos.add(so);
         
         // Pass List to sendWithTemplate method
