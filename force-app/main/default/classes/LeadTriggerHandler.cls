@@ -20,7 +20,7 @@ public with sharing class LeadTriggerHandler {
             } else {
                 return;
             }
-        } else if (leadRec != null && !leadRec.isEmpty() && leadRec[0]?.Campaign__r?.Name == 'NEC') {
+        } else if (leadRec != null && !leadRec.isEmpty() && leadRec[0]?.Campaign__r?.Name == 'Roundup') {
             if (leadRec[0].Retainer_to_Send__c == 'Kline Specter - Self - FL') {
                 SendSignatureRequestWithTemplate.generateHelloSignature(leadRec[0].Email, leadRec[0].Name, leadRec[0].Id, 'Saddle Rock - Roundup - Self - FL');
             } else if (leadRec[0].Retainer_to_Send__c == 'Kline Specter - OBO - FL') {
