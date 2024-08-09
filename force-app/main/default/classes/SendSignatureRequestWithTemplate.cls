@@ -12,7 +12,7 @@ public class SendSignatureRequestWithTemplate {
             ro.HelloSign__SpecificEmail__c = email;
             ro.HelloSign__SpecificFirstName__c = name;
         }
-        update role;
+        //update role;
 
         List<HelloSign.SendWithTemplate.SendObject> sos = 
           new List<HelloSign.SendWithTemplate.SendObject>();
