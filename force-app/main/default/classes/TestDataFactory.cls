@@ -1,5 +1,22 @@
 public class TestDataFactory {
     
+    public static Campaign createTestCampaign() {
+        Campaign testcampaign = new Campaign(
+            Name = 'NEC',
+            IsActive = true
+        );
+        insert testcampaign;
+        return testcampaign;
+    }
+
+    public static Account createTestCompany() {
+        Account testAccount = new Account(
+            Name = 'Saddle Rock'
+        );
+        insert testAccount;
+        return testAccount;
+    }
+
 	public static Lead createTestLead() {
         Lead testLead = new Lead(
             FirstName = 'Test',
@@ -15,7 +32,8 @@ public class TestDataFactory {
             Signature_Mail_Request__c = 'Digital',
             Caller_Recorded_Consent__c = 'Yes',
             Contacting_Consent__c = 'Yes',
-            Additional_Notes__c = 'Test notes'
+            Additional_Notes__c = 'Test notes',
+            Retainer_to_Send__c = 'TH: Child DOB 2002-2005 & lives in Missouri or Illinois'
         );
         insert testLead;
         return testLead;
