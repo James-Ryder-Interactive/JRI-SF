@@ -5,7 +5,7 @@ public class FacebookCAPIQueueableTest {
         // Set up test data if needed
         
         // Create a mock response
-        HttpCalloutMock mock = new FacebookCAPIIntegrationMock();
+        HttpCalloutMock mock = new HttpIntegrationMock();
         
         // Start test, associate the mock with a callout
         Test.startTest();
