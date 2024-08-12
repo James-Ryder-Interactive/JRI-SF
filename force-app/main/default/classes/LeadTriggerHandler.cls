@@ -33,6 +33,12 @@ public with sharing class LeadTriggerHandler {
                 return;
             }
         }
+    }
 
+    public static void sendEventToMeta(Id recordId){
+        List <Lead> leadRec = [SELECT Id, Email, Name, Company__c, Campaign__c, Campaign__r.Name FROM Lead WHERE Id = :recordId];
+        if (leadRec[0].Campaign__r.Name == 'Powerport') {
+            System.enqueueJob(new FacebookCAPIQueueable(leadRec[0].Id));
+        }
     }
 }
