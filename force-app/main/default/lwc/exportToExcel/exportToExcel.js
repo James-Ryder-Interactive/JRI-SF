@@ -21,6 +21,7 @@ export default class ExportToExcel extends LightningElement {
 
     // Function to format date and time
     formatDateTime = (dateStr) => {
+        if (!dateStr) return '';
         const date = new Date(dateStr);
         return date.toLocaleString('en-US', {
             month: 'numeric',
