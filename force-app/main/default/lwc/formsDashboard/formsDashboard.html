@@ -1,11 +1,52 @@
 <template>
-    <lightning-card title="Available Forms">
-        <ul>
-            <template for:each={forms} for:item="form">
-                <li key={form.id}>
-                    <lightning-button label={form.name} data-url={form.url} onclick={navigateToForm}></lightning-button>
-                </li>
-            </template>
-        </ul>
-    </lightning-card>
+    <!-- Header Section with Search and New Form Button -->
+    <lightning-layout horizontal-align="spread">
+        <lightning-layout-item>
+            <lightning-input type="search" placeholder="Search Forms" onchange={handleSearch}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-button label="Create Form" onclick={handleNewForm}></lightning-button>
+        </lightning-layout-item>  
+    </lightning-layout>
+
+    <template if:true={forms}>
+        <template for:each={forms} for:item="form">
+            <lightning-card key={form.Id} class="padding-vertical_medium" data-id={form.Id} data-form-name={form.Name} name="submitForm" onclick={handleCardAction}>
+                
+                <h3 slot="title">
+                    <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+                    {form.Name}
+                </h3>
+                <lightning-layout horizontal-align="spread">
+                    <lightning-layout-item class="slds-size_5-of-6">
+                        <p class="slds-p-horizontal_small">{form.Description}</p>
+                        <p class="slds-p-horizontal_small">Created on {form.CreatedDate}</p>
+                    </lightning-layout-item>
+                        <lightning-badge label={form.Submission_Count__c}></lightning-badge>
+                    <lightning-layout-item>
+
+                    </lightning-layout-item>
+                </lightning-layout>
+                <!-- footer -->
+                <div slot="footer">
+                    <lightning-layout vertical-align="end">
+                        <lightning-layout-item padding="horizontal-small">
+                            <lightning-button label="Submissions" name="view" variant="base" data-id={form.Id} data-form-name={form.Name} onclick={handleCardAction}></lightning-button>
+                        </lightning-layout-item>
+                        <lightning-layout-item padding="horizontal-small">
+                            <lightning-button label="Edit" name="edit" variant="base" data-id={form.Id} onclick={handleCardAction}></lightning-button>
+                        </lightning-layout-item>
+                        <lightning-layout-item padding="horizontal-small">
+                            <lightning-button label="Delete" name="delete" variant="base" data-id={form.Id} onclick={handleCardAction} class="slds-text-color_destructive"></lightning-button>
+                        </lightning-layout-item>
+                    </lightning-layout>                   
+                </div>
+
+            </lightning-card>
+        </template>
+    </template>
+
+    <template if:false={forms}>
+            <p>No forms found.</p>
+    </template> 
 </template>
