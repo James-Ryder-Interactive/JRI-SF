@@ -1,7 +1,8 @@
 import { LightningElement, api, track } from 'lwc';
-import { CurrentPageReference } from 'lightning/navigation';
 import getFormQuestions from '@salesforce/apex/FormMetadataController.getFormQuestions';
+import saveFormAnswers from '@salesforce/apex/FormsController.saveFormAnswers';
 
+import ToastContainer from 'lightning/toastContainer';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class FormSubmission extends LightningElement {
@@ -14,6 +15,9 @@ export default class FormSubmission extends LightningElement {
     isLoading = true;
 
     connectedCallback() {
+        const toastContainer = ToastContainer.instance();
+        toastContainer.toastPosition = 'top';
+
         console.log('window.location.href:', window.location.href);
         let urlString = window.location.href;
         let paramString = urlString.split("?")[1];
@@ -76,6 +80,7 @@ export default class FormSubmission extends LightningElement {
 
     handleInputChange(event) {
         const fieldApiName = event.target.dataset.fieldApiName;
+        console.log('fieldApiName:', fieldApiName);  // Log to check if it's being set correctly
         if (fieldApiName) {
             this.answers[fieldApiName] = event.target.value;
         } else {
@@ -84,15 +89,46 @@ export default class FormSubmission extends LightningElement {
     }
 
     handleSubmit() {
-        submitForm({ formName: this.formName, answers: this.answers })
-            .then(() => {
-                // Show success message and reset form
-                this.showToast('Success', 'Form submitted successfully!', 'success');
-                this.answers = {};
-            })
-            .catch(error => {
-                this.showToast('Error', 'Failed to submit form: ' + error.body.message, 'error');
-            });
+    // Check if all required fields are filled
+    const requiredFields = Object.keys(this.answers).filter(key => {
+        const question = this.questions.find(q => q.fieldApiName === key);
+        return question.required && !this.answers[key];
+    });
+
+    if (requiredFields.length > 0) {
+        // Display an error or message if there are missing required fields
+        console.error('Please fill in all required fields.');
+        return;
+    }
+
+    // Call Apex method to save answers
+
+    this.isLoading = true; 
+    
+
+    saveFormAnswers({ formData: this.answers })
+        .then(() => {
+            // Show success message and reset form
+            this.showToast('Success', 'Form submitted successfully!', 'success');
+            setTimeout(() => window.location.reload(), 1000);
+        })
+        .catch(error => {
+            let errorMessage = 'Failed to submit form.';
+    
+            if (error.body && error.body.pageErrors && error.body.pageErrors.length > 0) {
+                errorMessage += ' ' + error.body.pageErrors.map(err => err.message).join('; ');
+            } else if (error.body && error.body.fieldErrors) {
+                // Loop through field-specific errors
+                const fieldErrors = Object.keys(error.body.fieldErrors)
+                    .map(field => `${field}: ${error.body.fieldErrors[field].map(err => err.message).join('; ')}`)
+                    .join('; ');
+                errorMessage += ' ' + fieldErrors;
+            } else if (error.body && error.body.message) {
+                errorMessage += ' ' + error.body.message;
+            }
+
+            this.showToast('Error', errorMessage, 'error');
+        });
     }
 
     isTextField(fieldType) {
@@ -109,9 +145,9 @@ export default class FormSubmission extends LightningElement {
 
     showToast(title, message, variant) {
         const evt = new ShowToastEvent({
-            title,
-            message,
-            variant,
+            title: title,
+            message: message,
+            variant: variant
         });
         this.dispatchEvent(evt);
     }
