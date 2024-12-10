@@ -12,7 +12,7 @@ public class FacebookCAPIQueueable implements Queueable {
         Lead lead = new Lead();
         String leadFirstName;
         String leadLastName;
-        //String leadAddress;
+        String leadStatus;
         String leadEmail;
         String leadPhone;
         String city;
@@ -60,7 +60,11 @@ public class FacebookCAPIQueueable implements Queueable {
         List<Map<String, Object>> dataList = new List<Map<String, Object>>();
 
         Map<String, Object> mainData = new Map<String, Object>();
-        mainData.put('event_name', 'Purchase');
+        if (lead.Status == 'Qualified'){
+            mainData.put('event_name', 'application');
+        } else if (lead.Status == 'Retainer signed') {
+            mainData.put('event_name', 'Purchase');
+        }    
 		mainData.put('event_time', String.valueOf(System.now().getTime() / 1000));
         mainData.put('event_source_url', 'https://jrinteractive--jripart.sandbox.my.salesforce.com/');
 		mainData.put('action_source', 'system_generated');
@@ -70,14 +74,10 @@ public class FacebookCAPIQueueable implements Queueable {
         dataList.add(mainData);
 		eventData.put('data',  new List<Map<String, Object>>{mainData});
        	     
-        if (lead.Campaign__r.Name == 'Powerport' && lead.Company__r.Name == 'NGK Law - Bard'){
+        if (lead.Campaign__r.Name == 'Powerport'){
             CAPI_Oauth_Settings__mdt oAuthDetails = CAPI_Oauth_Settings__mdt.getInstance('JRI_Port');
         	FacebookCAPIIntegration.sendEvent(oAuthDetails.Access_Token__c, oAuthDetails.Pixel_ID__c, eventData);
-        } else if (lead.Campaign__r.Name == 'Camp Lejeune' && lead.Company__r.Name == 'Saddle Rock') {
-            System.debug('cmpl');
-            CAPI_Oauth_Settings__mdt oAuthDetailsCMPL = CAPI_Oauth_Settings__mdt.getInstance('JRI_Camp_Lejuene');
-            FacebookCAPIIntegration.sendEvent(oAuthDetailsCMPL.Access_Token__c, oAuthDetailsCMPL.Pixel_ID__c, eventData);
-        }
+        } 
     }
     
     public void execute(QueueableContext context) {

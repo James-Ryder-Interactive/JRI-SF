@@ -1,5 +1,10 @@
 public class RoundupTriggerHandler {
-    
+    // Define static constants
+    private static final String LEAD_DATA_ENDPOINT = 'https://sa.krauseandkinsman.com/saservice/sawebservice.svc/Receiver/OfficeCalls/e1dd0dd0cb194999ac4495a7ebeb9213';
+    private static final String API_KEY = '9b15c2857fee41b2aa37dfb0199be52b';
+    private static final String DOCUMENT_UPLOAD_ENDPOINT = 'https://sa.krauseandkinsman.com/sasvc/SAWebService.svc/receiver/UploadDocument?filename=';
+    private static final Boolean SHOULD_SEND_EMAIL = true;
+
     public static void sendDataToSmartAdvocate(Id recordId) {
 		List <Roundup__c> newRecord = [SELECT Id, OwnerId, Lead__r.CreatedDate, Name, Power_of_Attorney__c, City_and_State_Deceased__c, Confirm_Date_of_Death__c,
                 Occupation__c, Begin_Smoking_Date__c, Years_Smoked__c, Packs_of_Cigarettes_Per_Day__c, Any_Other_Tobacco_Products__c, Quit_Smoking_Date__c,
@@ -45,7 +50,14 @@ public class RoundupTriggerHandler {
         System.debug('nextFireTime ::: ' + nextFireTime);
 
         try {
-        	System.schedule('ScheduleRoundupIntegration_' + leadId + System.now(), nextFireTime, new ScheduleRoundupIntegration(smartAdvocateModelJson, leadId));
+        	System.schedule('ScheduleRoundupIntegration_' + leadId + System.now(), nextFireTime, new SmartAdvocateSchedule (
+                smartAdvocateModelJson,
+                leadId,
+                LEAD_DATA_ENDPOINT,
+                API_KEY,
+                DOCUMENT_UPLOAD_ENDPOINT,
+                SHOULD_SEND_EMAIL
+            ));
         } catch (Exception ex) {
             System.debug( 'Error scheduling apex job : ' + ex.getMessage());            
         }

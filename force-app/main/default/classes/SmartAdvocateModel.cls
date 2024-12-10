@@ -1,8 +1,9 @@
 public class SmartAdvocateModel {
-
+//This was for sending Roundup records
     public static List<Object> mapToSmartAdvocateFields(List<Roundup__c> records){
         List<Object> output = new List<Object>();
         
+        //This was for sending Roundup records : This is not needed anymore
         for(Roundup__c record : records){
             Object intake;
             Map<String, String> mapToConvert = new Map<String, String>();
@@ -102,5 +103,87 @@ public class SmartAdvocateModel {
         }
 	
         return output;
+    }
+
+//This is for Marriot
+    public static List<Object> mapToSmartAdvocateMarriot(List<Lead> records){
+            // Prepare output list
+        List<Object> output = new List<Object>();
+
+        // Collect Lead IDs for related record queries
+        Set<Id> leadIds = new Set<Id>();
+        for (Lead lead : records) {
+            leadIds.add(lead.Id);
+        }
+
+        // Query related Client__c and Case__c records
+        /*Map<Id, Client__c> clientMap = new Map<Id, Client__c>([
+            SELECT Id, Name, Lead__c
+            FROM Client__c
+            WHERE Lead__c IN :leadIds
+        ]);*/
+
+        /*Map<Id, Case__c> caseMap = new Map<Id, Case__c>([
+            SELECT Id, Lead__c
+            FROM Case__c
+            WHERE Lead__c IN :leadIds
+        ]);*/
+
+        // Process each lead
+        for (Lead lead : records) {
+            if (lead.Company__r.Name == 'Marriott') { // Filter by Campaign name
+                Map<String, String> mapToConvert = new Map<String, String>();
+
+                // Add Lead fields
+                mapToConvert.put('ID', lead.Id);
+
+                mapToConvert.put('source', 'TMTLF - Marriott');
+                mapToConvert.put('caseType', 'Marriott Privacy');
+                mapToConvert.put('referralFirm', 'Sperling & Slater PC');
+                mapToConvert.put('caseDetails', lead.Additional_Notes__c);
+                mapToConvert.put('retainDate', String.valueOf(lead.Date_Signed__c));
+
+                mapToConvert.put('firstName', lead.FirstName);
+                mapToConvert.put('lastName', lead.LastName);
+                mapToConvert.put('gender', lead.LastName);
+                mapToConvert.put('dob', String.valueOf(lead.Date_of_Birth__c));
+                mapToConvert.put('ssn', lead.SSN__c);
+                mapToConvert.put('phone', lead.Phone);
+                mapToConvert.put('email', lead.Email);
+                mapToConvert.put('address', lead.Street);
+                mapToConvert.put('city', lead.City);
+                mapToConvert.put('state', lead.State);
+                mapToConvert.put('zip', lead.PostalCode);
+
+                mapToConvert.put('injuredFirstName', lead.FirstName);
+                mapToConvert.put('injuredLastName', lead.LastName);
+                mapToConvert.put('injuredGender', lead.LastName);
+                mapToConvert.put('injuredDoB', String.valueOf(lead.Date_of_Birth__c));
+                mapToConvert.put('injuredSSN', lead.SSN__c);
+                mapToConvert.put('injuredPhone', lead.Phone);
+                mapToConvert.put('injuredEmail', lead.Email);
+                mapToConvert.put('injuredAddress', lead.Street);
+                mapToConvert.put('injuredCity', lead.City);
+                mapToConvert.put('injuredState', lead.State);
+                mapToConvert.put('injuredZip', lead.PostalCode);
+
+                // Add Client__c fields (if exists)
+                /*Client__c client = clientMap.get(lead.Id);
+                if (client != null) {
+                    //mapToConvert.put('Client Name', client.Name);
+                }*/
+
+                // Add Case__c fields (if exists)
+                /*Case__c caseRec = caseMap.get(lead.Id);
+                if (caseRec != null) {
+                    //mapToConvert.put('Case Number', caseRec.CaseNumber);
+                }*/
+
+                // Add to output
+                output.add(mapToConvert);
+            }
+        }
+
+    return output;
     }
 }

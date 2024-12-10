@@ -15,7 +15,7 @@ public class SmartAdvocateIntegrationTest {
         String leadDataJson = JSON.serialize(mockLead);
 
         Test.startTest();        
-       	String result = SmartAdvocateIntegration.sendLeadData(leadDataJson);
+       	String result = SmartAdvocateIntegration.sendLeadData('https://sa.krauseandkinsman.com/saservice/sawebservice.svc/Receiver/OfficeCalls/test',leadDataJson);
         Test.stopTest();
         
         // Perform assertions
