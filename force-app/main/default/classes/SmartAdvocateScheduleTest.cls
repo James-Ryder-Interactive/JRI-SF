@@ -1,5 +1,5 @@
 @isTest
-public class ScheduleRoundupIntegrationTest {
+public class SmartAdvocateSchedule {
     @isTest
     static void testExecuteMethod() {
         // Create a mock response
@@ -12,7 +12,7 @@ public class ScheduleRoundupIntegrationTest {
         String leadId = testLead.Id;
 
         // Create an instance of ScheduleRoundupIntegration
-        ScheduleRoundupIntegration scheduledJob = new ScheduleRoundupIntegration(smartAdvocateModelJson, leadId);
+        SmartAdvocateSchedule scheduledJob = new SmartAdvocateSchedule(smartAdvocateModelJson, leadId);
 
         // Call the execute method
         Test.startTest();

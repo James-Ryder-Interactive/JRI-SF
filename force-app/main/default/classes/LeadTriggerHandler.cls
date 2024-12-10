@@ -1,5 +1,12 @@
 public with sharing class LeadTriggerHandler {
-    public static void sendRetainerOnStatusUpdate(Id recordId){
+
+    // Configuration values for the SmarAdvocate Integration - Marriot
+    private static final String LEAD_DATA_ENDPOINT = 'https://hl.smartadvocate.com/SAService/sawebservice.svc/Receiver/OfficeCalls/2f6605127f3146238c56ac064f2e2575';
+    private static final String API_KEY = '2f6605127f3146238c56ac064f2e2575';
+    private static final String DOCUMENT_UPLOAD_ENDPOINT = 'https://hl.smartadvocate.com/SAService/sawebservice.svc/Receiver/uploaddocument';
+    private static final Boolean SHOULD_SEND_EMAIL = false;
+
+    public static void sendRetainerOnStatusUpdate(Id recordId) {
         List <Lead> leadRec = [SELECT Id, Email, Name, Company__c, Campaign__c, Campaign__r.Name, Retainer_to_Send__c FROM Lead WHERE Id = :recordId AND Company__r.Name = 'Saddle Rock' AND (Campaign__r.Name = 'NEC' OR Campaign__r.Name = 'Roundup') WITH SECURITY_ENFORCED];
 
         if(leadRec != null && !leadRec.isEmpty() && leadRec[0]?.Campaign__r?.Name == 'NEC') {
@@ -39,10 +46,50 @@ public with sharing class LeadTriggerHandler {
         }
     }
 
-    public static void sendEventToMeta(Id recordId){
+    public static void sendEventToMeta(Id recordId) {
         List <Lead> leadRec = [SELECT Id, Email, Name, Company__c, Campaign__c, Campaign__r.Name FROM Lead WHERE Id = :recordId];
         if (leadRec[0].Campaign__r.Name == 'Powerport') {
             System.enqueueJob(new FacebookCAPIQueueable(leadRec[0].Id));
+        }
+    }
+
+    public static void scheduleSmartAdvocateIntegration(Id recordId) {
+        List <Lead> leadList = [SELECT Id, FirstName, LastName, Email, Phone, Street, City, 
+                State, PostalCode, Date_Signed__c, Additional_Notes__c, SSN__c, 
+                Date_of_Birth__c, Company__r.Name, Gender__c
+                FROM Lead
+                WHERE Id = :recordId];
+
+        List<Object> leadModels = SmartAdvocateModel.mapToSmartAdvocateMarriot(leadList);
+    	String leadJson = JSON.serialize(leadModels[0]);
+
+        // Introduce a delay before calling sendLeadDataAsync
+        String year = String.valueOf(Datetime.now().year());
+        String month = Datetime.now().format('MMM').toUpperCase();
+        String day = String.valueOf(Datetime.now().day());
+        String hour = String.valueOf(Datetime.now().hour());
+		String min = String.valueOf(Datetime.now().minute() + 2);
+		String ss = String.valueOf(Datetime.now().second());
+
+        String nextFireTime = ss + ' ' + min + ' ' + hour + ' ' +  day + ' ' + month + ' ? ' + year;
+        System.debug('nextFireTime ::: ' + nextFireTime);
+
+        // Create the schedulable job
+        try {
+            System.schedule(
+                'scheduleSmartAdvocateIntegration_' + recordId + System.now(),
+                nextFireTime,
+                new SmartAdvocateSchedule(
+                    leadJson,
+                    recordId,
+                    LEAD_DATA_ENDPOINT,
+                    API_KEY,
+                    DOCUMENT_UPLOAD_ENDPOINT,
+                    SHOULD_SEND_EMAIL
+                )
+            );
+        } catch (Exception ex) {
+            System.debug('Error scheduling Apex job for Lead: ' + ex.getMessage());
         }
     }
 }

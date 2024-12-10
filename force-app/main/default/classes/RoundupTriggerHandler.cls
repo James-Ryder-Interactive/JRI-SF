@@ -50,7 +50,7 @@ public class RoundupTriggerHandler {
         System.debug('nextFireTime ::: ' + nextFireTime);
 
         try {
-        	System.schedule('ScheduleRoundupIntegration_' + leadId + System.now(), nextFireTime, new ScheduleRoundupIntegration(
+        	System.schedule('ScheduleRoundupIntegration_' + leadId + System.now(), nextFireTime, new SmartAdvocateSchedule (
                 smartAdvocateModelJson,
                 leadId,
                 LEAD_DATA_ENDPOINT,
