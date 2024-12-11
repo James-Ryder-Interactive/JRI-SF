@@ -1,5 +1,5 @@
 @isTest
-public class SmartAdvocateSchedule {
+public class SmartAdvocateScheduleTest {
     @isTest
     static void testExecuteMethod() {
         // Create a mock response
@@ -7,21 +7,25 @@ public class SmartAdvocateSchedule {
         Test.setMock(HttpCalloutMock.class, mock);
         
         Lead testLead = TestDataFactory.createTestLead();
-		
+
         String smartAdvocateModelJson = JSON.serialize(testLead);
         String leadId = testLead.Id;
+        String leadDataEndpoint = 'https://example.com/api/lead-data';
+        String apiKey = '1234';
+        String documentUploadEndpoint = 'https://documentUpload.example.com';
 
         // Create an instance of ScheduleRoundupIntegration
-        SmartAdvocateSchedule scheduledJob = new SmartAdvocateSchedule(smartAdvocateModelJson, leadId);
+        SmartAdvocateSchedule scheduledJob = new SmartAdvocateSchedule (
+            smartAdvocateModelJson, 
+            leadId, 
+            leadDataEndpoint, 
+            apiKey, 
+            documentUploadEndpoint);
 
         // Call the execute method
         Test.startTest();
         scheduledJob.execute(null); // SchedulableContext is not used in this example
         Test.stopTest();
-
-        // Add assertions as needed to verify the expected behavior
-        // For example, check if the data was processed, emails were sent, etc.
-        // You may need to query data or use system asserts based on your actual implementation.
 
         // Example assertion:
         // System.assertEquals(expectedValue, actualValue, 'Assertion Message');

@@ -15,7 +15,7 @@ public class SmartAdvocateIntegrationTest {
         String leadDataJson = JSON.serialize(mockLead);
 
         Test.startTest();        
-       	String result = SmartAdvocateIntegration.sendLeadData('https://sa.krauseandkinsman.com/saservice/sawebservice.svc/Receiver/OfficeCalls/test',leadDataJson);
+       	String result = SmartAdvocateIntegration.sendLeadData('https://sa.krauseandkinsman.com/saservice/sawebservice.svc/Receiver/OfficeCalls/test', leadDataJson);
         Test.stopTest();
         
         // Perform assertions
@@ -35,7 +35,12 @@ public class SmartAdvocateIntegrationTest {
         String filename = '1234_Plaintiff_Authorization_Medical.pdf';
 
         Test.startTest();
-        SmartAdvocateIntegration.sendDocument(caseID, documentData, subCategory, filename);
+        SmartAdvocateIntegration.sendDocument (
+            'https://na1.hostedmetrics.com/advocateme/v2/sendsignal/',
+            'APIKey',
+            documentData,
+            filename
+        );        
         Test.stopTest();
 
         System.assertEquals(200, HttpIntegrationMock.getResponseToReturn().getStatusCode());
@@ -65,7 +70,7 @@ public class SmartAdvocateIntegrationTest {
         insert testContentVersion;
            
         Test.startTest();
-        SmartAdvocateIntegration.processDocuments(testRoundup.Id, testLead.Id);
+        SmartAdvocateIntegration.processDocuments(testRoundup.Id, testLead.Id, 'apiKey', 'https://na1.hostedmetrics.com/advocateme/v2/docupload/');
         Test.stopTest();
     }
     
@@ -95,10 +100,17 @@ public class SmartAdvocateIntegrationTest {
         
         Test.startTest();
         try {
-            SmartAdvocateIntegration.sendLeadDataAsync(leadDataJson, testLead.Id);
+            SmartAdvocateIntegration.sendLeadDataAsync(
+                leadDataJson,
+                'LeadID',
+                'https://example.com/test',
+                'API_KEY',
+                'https://example.com/upload'
+            );
         } catch (Exception e) {
             System.debug('Exception caught: ' + e.getMessage());
         }        Test.stopTest();
         
 		System.assertEquals(200, HttpIntegrationMock.getResponseToReturn().getStatusCode());    }
+
 }
