@@ -25,7 +25,7 @@ trigger LeadTrigger on Lead (after insert, after update) {
                 LeadTriggerHandler.sendEventToMeta(lead.Id);
             }
 
-            if (lead.Status == 'Retainer Signed' && oldLead.Status != 'Retainer Signed') {
+            if (lead.Status == 'Retainer Signed' && oldLead.Status != 'Retainer Signed' && lead.Company__r.Name == 'Marriot') {
                 LeadTriggerHandler.scheduleSmartAdvocateIntegration(lead.Id);
             }
         }

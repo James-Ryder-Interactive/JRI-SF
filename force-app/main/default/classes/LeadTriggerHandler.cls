@@ -4,7 +4,6 @@ public with sharing class LeadTriggerHandler {
     private static final String LEAD_DATA_ENDPOINT = 'https://hl.smartadvocate.com/SAService/sawebservice.svc/Receiver/OfficeCalls/2f6605127f3146238c56ac064f2e2575';
     private static final String API_KEY = '2f6605127f3146238c56ac064f2e2575';
     private static final String DOCUMENT_UPLOAD_ENDPOINT = 'https://hl.smartadvocate.com/SAService/sawebservice.svc/Receiver/uploaddocument';
-    private static final Boolean SHOULD_SEND_EMAIL = false;
 
     public static void sendRetainerOnStatusUpdate(Id recordId) {
         List <Lead> leadRec = [SELECT Id, Email, Name, Company__c, Campaign__c, Campaign__r.Name, Retainer_to_Send__c FROM Lead WHERE Id = :recordId AND Company__r.Name = 'Saddle Rock' AND (Campaign__r.Name = 'NEC' OR Campaign__r.Name = 'Roundup') WITH SECURITY_ENFORCED];
@@ -84,8 +83,7 @@ public with sharing class LeadTriggerHandler {
                     recordId,
                     LEAD_DATA_ENDPOINT,
                     API_KEY,
-                    DOCUMENT_UPLOAD_ENDPOINT,
-                    SHOULD_SEND_EMAIL
+                    DOCUMENT_UPLOAD_ENDPOINT
                 )
             );
         } catch (Exception ex) {
