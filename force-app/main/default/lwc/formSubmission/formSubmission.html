@@ -1,0 +1,71 @@
+<template>
+    <div class="slds-page-header" title={formName}>
+    <lightning-layout class="slds-card-wrapper slds-wrap">
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading..."></lightning-spinner>
+        </template>
+    
+        <template if:false={isLoading}>
+            <lightning-card title={formName} icon-name="custom:custom63">
+                <template for:each={questions} for:item="section">
+                    <div key={section.sectionTitle} class="slds-p-horizontal_x-large slds-p-bottom_medium">
+                        <lightning-card variant="Narrow">
+                            <h2 class="slds-text-heading_medium slds-m-bottom_medium">{section.sectionTitle}</h2>
+                            <template for:each={section.questions} for:item="question">
+                                <label class="slds-form-element__label slds-p-left — xx-small" 
+                                key={question.fieldApiName} for={question.fieldApiName}>{question.label}
+                                </label>
+    
+                                <lightning-input lwc:if={question.isText}
+                                    variant="label-hidden" 
+                                    type={question.type}
+                                    key={question.fieldApiName} 
+                                    onchange={handleInputChange} 
+                                    required={question.required}
+                                    class="slds-size_4-of-6"
+                                    data-field-api-name={question.fieldApiName}>
+                                </lightning-input>
+    
+                                <lightning-input lwc:elseif={question.isDate}
+                                    variant="label-hidden"
+                                    type={question.type}
+                                    key={question.fieldApiName} 
+                                    onchange={handleInputChange} 
+                                    required={question.required}
+                                    class="slds-size_3-of-6"
+                                    data-field-api-name={question.fieldApiName}>
+                                </lightning-input>
+                                
+                                <lightning-combobox lwc:elseif={question.isPicklist}
+                                    key={question.fieldApiName} 
+                                    variant="label-hidden"
+                                    onchange={handleInputChange} 
+                                    options={question.options} 
+                                    required={question.required}
+                                    class="slds-size_4-of-6"
+                                    data-field-api-name={question.fieldApiName}
+                                    name={question.fieldApiName}>
+                                </lightning-combobox>
+    
+                                <lightning-input lwc:else
+                                    type={question.type}
+                                    key={question.fieldApiName} 
+                                    variant="label-hidden"
+                                    onchange={handleInputChange} 
+                                    required={question.required}
+                                    class="slds-size_4-of-6"
+                                    data-field-api-name={question.fieldApiName}>
+                            </lightning-input>
+                            </template>
+                        </lightning-card>
+                    </div>
+                </template>
+                <lightning-button label="Submit" 
+                    onclick={handleSubmit} 
+                    class="slds-p-horizontal_x-large slds-p-top_xx-large">
+                </lightning-button>
+            </lightning-card>
+        </template>
+    </lightning-layout>
+    </div>
+</template>
