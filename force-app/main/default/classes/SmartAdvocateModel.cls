@@ -131,7 +131,7 @@ public class SmartAdvocateModel {
 
         // Process each lead
         for (Lead lead : records) {
-            if (lead.Company__r.Name == 'Marriott') { // Filter by Campaign name
+            if (lead.Company__r.Name == 'Mariott') { // Filter by Campaign name
                 Map<String, String> mapToConvert = new Map<String, String>();
 
                 // Add Lead fields
@@ -145,7 +145,7 @@ public class SmartAdvocateModel {
 
                 mapToConvert.put('firstName', lead.FirstName);
                 mapToConvert.put('lastName', lead.LastName);
-                mapToConvert.put('gender', lead.LastName);
+                mapToConvert.put('gender', lead.Gender__c);
                 mapToConvert.put('dob', String.valueOf(lead.Date_of_Birth__c));
                 mapToConvert.put('ssn', lead.SSN__c);
                 mapToConvert.put('phone', lead.Phone);
@@ -157,7 +157,7 @@ public class SmartAdvocateModel {
 
                 mapToConvert.put('injuredFirstName', lead.FirstName);
                 mapToConvert.put('injuredLastName', lead.LastName);
-                mapToConvert.put('injuredGender', lead.LastName);
+                mapToConvert.put('injuredGender', lead.Gender__c);
                 mapToConvert.put('injuredDoB', String.valueOf(lead.Date_of_Birth__c));
                 mapToConvert.put('injuredSSN', lead.SSN__c);
                 mapToConvert.put('injuredPhone', lead.Phone);
