@@ -116,18 +116,32 @@ public class SmartAdvocateModel {
             leadIds.add(lead.Id);
         }
 
-        // Query related Client__c and Case__c records
-        /*Map<Id, Client__c> clientMap = new Map<Id, Client__c>([
-            SELECT Id, Name, Lead__c
-            FROM Client__c
-            WHERE Lead__c IN :leadIds
-        ]);*/
+        // Query related Client records 
+        Map<Id, Client_Information__c > clientMap = new Map<Id, Client_Information__c>();
 
-        /*Map<Id, Case__c> caseMap = new Map<Id, Case__c>([
-            SELECT Id, Lead__c
-            FROM Case__c
+        for (Client_Information__c  clientInfo : [
+            SELECT Id, Lead__c, United_States_Resident__c, Emergency_Contact_Name__c, Emergency_Contact_Phone__c, 
+                    Have_Permission_to_Contact_Emergency__c, Have_Permission_to_Reference_Case__c, Date_of_Birth__c
+            FROM Client_Information__c 
             WHERE Lead__c IN :leadIds
-        ]);*/
+        ]) {
+            clientMap.put(clientInfo.Lead__c, clientInfo);
+        }
+
+        // Query related Case records
+        Map<Id, Case_Details__c> caseMap = new Map<Id, Case_Details__c>();
+
+        for (Case_Details__c caseDetail : [
+            SELECT Id, Lead__c, Spoken_to_Another_Attorney__c, Resided_in_CA_During_Booking__c, 
+                   Used_Marriott_Website__c, Browser_Type_Used__c, Device_Type_Used__c, 
+                   Have_Marriott_Bonvoy_Account__c, Privacy_Tools_Enabled__c, 
+                   Facebook_Account_During_Booking__c, Logged_Into_Facebook_During_Booking__c, 
+                   Logged_Into_Facebook_90_Days_Prior__c, Refused_to_Provide_SSN__c, Will_Provide_SSN__c
+            FROM Case_Details__c
+            WHERE Lead__c IN :leadIds
+        ]) {
+            caseMap.put(caseDetail.Lead__c, caseDetail);
+        }
 
         // Process each lead
         for (Lead lead : records) {
@@ -146,9 +160,10 @@ public class SmartAdvocateModel {
                 mapToConvert.put('firstName', lead.FirstName);
                 mapToConvert.put('lastName', lead.LastName);
                 mapToConvert.put('gender', lead.Gender__c);
-                mapToConvert.put('dob', String.valueOf(lead.Date_of_Birth__c));
+                //mapToConvert.put('dob', String.valueOf(lead.Date_of_Birth__c));
                 mapToConvert.put('ssn', lead.SSN__c);
-                mapToConvert.put('phone', lead.Phone);
+                //mapToConvert.put('phone', lead.MobilePhone);
+                mapToConvert.put('Cell', lead.MobilePhone);
                 mapToConvert.put('email', lead.Email);
                 mapToConvert.put('address', lead.Street);
                 mapToConvert.put('city', lead.City);
@@ -158,26 +173,61 @@ public class SmartAdvocateModel {
                 mapToConvert.put('injuredFirstName', lead.FirstName);
                 mapToConvert.put('injuredLastName', lead.LastName);
                 mapToConvert.put('injuredGender', lead.Gender__c);
-                mapToConvert.put('injuredDoB', String.valueOf(lead.Date_of_Birth__c));
+                //mapToConvert.put('injuredDoB', String.valueOf(lead.Date_of_Birth__c));
                 mapToConvert.put('injuredSSN', lead.SSN__c);
-                mapToConvert.put('injuredPhone', lead.Phone);
+                mapToConvert.put('injuredPhone', lead.MobilePhone);
                 mapToConvert.put('injuredEmail', lead.Email);
                 mapToConvert.put('injuredAddress', lead.Street);
                 mapToConvert.put('injuredCity', lead.City);
                 mapToConvert.put('injuredState', lead.State);
                 mapToConvert.put('injuredZip', lead.PostalCode);
 
+                
+                mapToConvert.put('MP17', lead.Street);
+                mapToConvert.put('MP18', lead.SSN__c);
+                mapToConvert.put('MP19', lead.Email);
+                mapToConvert.put('MP22', lead.Contacting_Consent__c);
+                mapToConvert.put('MP23', lead.Caller_Recorded_Consent__c);
+                //mapToConvert.put('MP27', lead.Additional_Notes__c);
+                //mapToConvert.put('MP28', lead.);
+                mapToConvert.put('MP29', lead.Additional_Notes__c);
+                mapToConvert.put('MP30', lead.Id);
+                mapToConvert.put('IncidentState', 'CA');
+
                 // Add Client__c fields (if exists)
-                /*Client__c client = clientMap.get(lead.Id);
+                Client_Information__c client = clientMap.get(lead.Id);
                 if (client != null) {
-                    //mapToConvert.put('Client Name', client.Name);
-                }*/
+                    mapToConvert.put('MP4', client.United_States_Resident__c);
+                    mapToConvert.put('MP24', client.Emergency_Contact_Name__c + ' ' + client.Emergency_Contact_Phone__c);
+                    mapToConvert.put('MP25', client.Have_Permission_to_Contact_Emergency__c);
+                    mapToConvert.put('MP26', client.Have_Permission_to_Reference_Case__c);
+                    mapToConvert.put('dob', String.valueOf(client.Date_of_Birth__c));
+                    mapToConvert.put('injuredDoB', String.valueOf(client.Date_of_Birth__c));
+                }
+
 
                 // Add Case__c fields (if exists)
-                /*Case__c caseRec = caseMap.get(lead.Id);
+
+                Case_Details__c caseRec = caseMap.get(lead.Id);
                 if (caseRec != null) {
-                    //mapToConvert.put('Case Number', caseRec.CaseNumber);
-                }*/
+                    mapToConvert.put('MP1', caseRec.Spoken_to_Another_Attorney__c);
+                    mapToConvert.put('MP2', caseRec.Spoken_to_Another_Attorney__c);
+                    mapToConvert.put('MP3', caseRec.Spoken_to_Another_Attorney__c);
+                    mapToConvert.put('MP5', caseRec.Used_Marriott_Website__c);
+                    mapToConvert.put('MP6', caseRec.Used_Marriott_Website__c);
+                    mapToConvert.put('MP7', caseRec.Browser_Type_Used__c);
+                    mapToConvert.put('MP8', caseRec.Device_Type_Used__c == 'mobile' ? 'Yes' : 'No');
+                    mapToConvert.put('MP9', caseRec.Resided_in_CA_During_Booking__c);
+                    mapToConvert.put('MP10', caseRec.Have_Marriott_Bonvoy_Account__c);
+                    mapToConvert.put('MP11', caseRec.Have_Marriott_Bonvoy_Account__c);
+                    mapToConvert.put('MP12', caseRec.Privacy_Tools_Enabled__c);
+                    mapToConvert.put('MP13', caseRec.Facebook_Account_During_Booking__c);
+                    mapToConvert.put('MP14', caseRec.Logged_Into_Facebook_During_Booking__c);
+                    mapToConvert.put('MP15', caseRec.Logged_Into_Facebook_90_Days_Prior__c);
+                    mapToConvert.put('MP16', caseRec.Used_Marriott_Website__c);
+                    mapToConvert.put('MP20', caseRec.Refused_to_Provide_SSN__c);
+                    mapToConvert.put('MP21', caseRec.Will_Provide_SSN__c);
+                }
 
                 // Add to output
                 output.add(mapToConvert);

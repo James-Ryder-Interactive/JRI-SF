@@ -110,7 +110,7 @@ public class SmartAdvocateIntegration {
 
         // Query all related ContentVersions
         List<ContentVersion> contentVersions = [
-            SELECT Title, VersionData, ContentDocumentId
+            SELECT Title, VersionData, ContentDocumentId, FileExtension
             FROM ContentVersion
             WHERE ContentDocumentId IN :contentDocumentIds AND IsLatest = true
         ];
@@ -119,14 +119,16 @@ public class SmartAdvocateIntegration {
         for (ContentVersion contentVersion : contentVersions) {
 
             // This is for Roundup
-            String subCategory = contentVersion.Title;
+            String subCategory = contentVersion.Title.contains('Retainer') ? 'Retainer Agreement' : 'Proof of Claim';
+            String category = 'Client Docs';
+        
             //String subCategory = contentVersion.Title.contains('Roundup CFA') ? 'Retainer Agreement' : 'Authorization Medical';
-            String filename = caseID + '_Plaintiff_' + subCategory + '.pdf';
+            String filename = caseID + '_' + category + '_' + subCategory +  '.' + contentVersion.FileExtension;
 
             String endpoint = documentUploadEndpoint + 
                 '?filename=' + EncodingUtil.urlEncode(filename, 'UTF-8') +
                 '&SACaseNumber=' + caseID + 
-                '&Category=Plaintiff&SubCategory=' + EncodingUtil.urlEncode(subCategory, 'UTF-8');
+                '&Category=' + EncodingUtil.urlEncode(category, 'UTF-8').replace('+', '%20') + '&SubCategory=' + EncodingUtil.urlEncode(subCategory, 'UTF-8');
 
             sendDocument(endpoint, apiKey, contentVersion.VersionData, filename);
             
