@@ -1,0 +1,73 @@
+<apex:page standardController="Lead" extensions="LeadPDFController" renderAs="pdf">
+    <html>
+        <head>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    line-height: 1.6;
+                }
+                h1, h2, h3 {
+                    color: #2E86C1;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-bottom: 20px;
+                }
+                table, th, td {
+                    border: 1px solid #ddd;
+                }
+                th, td {
+                    padding: 8px;
+                    text-align: left;
+                }
+                th {
+                    background-color: #f2f2f2;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Intake Questions and Answers</h1>
+
+            <h2>Personal Information</h2>
+            <p><b>May I have your name?</b> {!lead.FirstName} {!lead.LastName}</p>
+            <p><b>Your Date of Birth:</b> {!clientInformation.Date_of_Birth__c}</p>
+            <p><b>Your Cell Phone number:</b> {!lead.MobilePhone}</p>
+            <p><b>May I have your email address as well?</b> {!lead.Email}</p>
+            <p><b>Your Home Phone number:</b> {!lead.Phone}</p>
+            <p><b>May I have your address?</b> {!lead.Street}, {!lead.City}, {!lead.State}, {!lead.PostalCode}</p>
+
+            <h2>Alternate Contact</h2>
+            <p><b>Alternate Contact Name:</b> {!lead.Other_Name__c}</p>
+            
+        
+            <h2>Case Details</h2>    
+            <p><b>Are you currently represented by an attorney for this matter?</b> {!caseDetails.Spoken_to_Another_Attorney__c}</p>
+            <p><b>Have you visited the official Marriott website within the last 4 years?</b> {!caseDetails.Used_Marriott_Website__c}</p>
+            <p><b>Which month and year did you visit the official Marriott website?</b> {!caseDetails.Date_Mariott_Website_Visited__c}</p>
+            <p><b>Did you visit the official Marriott website on a laptop or desktop computer to search, book, confirm, or log into the Marriott Resort wifi?</b> {!caseDetails.Visited_Website_on_Laptop__c}</p>
+            <p><b>What type of device did you use to search/book your reservation on the official Marriott website?</b> {!caseDetails.Device_Type_Used__c}</p>
+            <p><b>What type of browser did you use?</b> {!caseDetails.Browser_Type_Used__c}</p>
+            <p><b>Are you CURRENTLY a legal resident of the state of California?</b> {!clientInformation.United_States_Resident__c}</p>
+            <p><b>Did you reside in California at the time of searching and/or booking with Marriott on a non-mobile device </b> {!caseDetails.Resided_in_CA_During_Booking__c}</p>
+            <p><b>Do you have a Marriott Bonvoy account?</b> {!caseDetails.Have_Marriott_Bonvoy_Account__c}</p>
+            <p><b>Did you set up your online account with Marriott Bonvoy on a non-mobile device?</b> {!caseDetails.Non_Mobile_Device_Setup__c}</p>
+            <p><b>Did you have any "do not track" or other privacy tools enabled on your web browser when you made the booking(s)?</b> {!caseDetails.Privacy_Tools_Enabled__c}</p>
+            <p><b>Did you have a Facebook account when you made the booking(s) for Marriott?</b> {!caseDetails.Facebook_Account_During_Booking__c}</p>
+            <p><b>Were you logged into Facebook when you made the booking(s) for the Marriott?</b> {!caseDetails.Logged_Into_Facebook_During_Booking__c}</p>
+            <p><b>Had you logged into your Facebook account within 90 days prior to booking?</b> {!caseDetails.Logged_Into_Facebook_90_Days_Prior__c}</p>
+            <p><b>What is your SSN?</b> {!lead.SSN__c}</p>
+            <p><b>Did PNC refuse to give complete SSN?</b> {!caseDetails.Refused_to_Provide_SSN__c}</p>
+            <p><b>Will you provide your FULL 9-digit SSN to your attorney when they reach out to you?</b> {!caseDetails.Will_Provide_SSN__c}</p>
+            <p><b>Do we have permission to communicate with you via email?</b> {!lead.Contacting_Consent__c}</p>
+            <p><b>Do we have permission to communicate with you via SMS/text messages in order to collect additional information and provide you documents for your potential case?</b> {!lead.Caller_Recorded_Consent__c}</p>
+            <p><b>Emergency Contact Name: </b> {!clientInformation.Emergency_Contact_Name__c}</p>
+            <p><b>Emergency Contact Phone Number:</b> {!clientInformation.Emergency_Contact_Phone__c}</p>
+            <p><b>Do we have permission to contact this person if we are unable to get a hold of you?</b> {!clientInformation.Have_Permission_to_Contact_Emergency__c}</p>
+            <p><b>Do we have permission to reference your case to this person?</b> {!clientInformation.Have_Permission_to_Reference_Case__c}</p>
+
+            <h2>Additional Notes</h2>
+            <p>{!lead.Additional_Notes__c}</p>
+        </body>
+    </html>
+</apex:page>
