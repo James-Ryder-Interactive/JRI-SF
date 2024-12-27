@@ -60,7 +60,8 @@ public with sharing class LeadTriggerHandler {
                         Used_Marriott_Website__c, Browser_Type_Used__c, Device_Type_Used__c, 
                         Have_Marriott_Bonvoy_Account__c, Privacy_Tools_Enabled__c, 
                         Facebook_Account_During_Booking__c, Logged_Into_Facebook_During_Booking__c, 
-                        Logged_Into_Facebook_90_Days_Prior__c, Refused_to_Provide_SSN__c, Will_Provide_SSN__c 
+                        Logged_Into_Facebook_90_Days_Prior__c, Refused_to_Provide_SSN__c, Will_Provide_SSN__c,
+                        Non_Mobile_Device_Setup__c 
                     FROM Case_Details__r),
                     (SELECT Id, United_States_Resident__c, Emergency_Contact_Name__c, Emergency_Contact_Phone__c, 
                         Have_Permission_to_Contact_Emergency__c, Have_Permission_to_Reference_Case__c, Lead__c, Date_of_Birth__c 

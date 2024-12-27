@@ -27,10 +27,10 @@ trigger LeadTrigger on Lead (after insert, after update) {
                 LeadTriggerHandler.sendRetainerOnStatusUpdate(lead.Id);
             }
 
-            /*else if (lead.Status == 'Retainer Signed' && oldLead.Status != 'Retainer Signed' && lead.Company_Formula__c == 'Mariott') {
+            else if (lead.Status == 'Retainer Signed' && oldLead.Status != 'Retainer Signed' && lead.Company_Formula__c == 'Mariott') {
                 LeadTriggerHandler.scheduleSmartAdvocateIntegration(lead.Id);
-            }*/
-            
+            }
+
             else if (((lead.Status == 'Qualified'  && oldLead.Status != 'Qualified') || (lead.Status == 'Retainer signed'  && oldLead.Status != 'Retainer signed')) && lead.Campaign__r.Name == 'Powerport') {
                 LeadTriggerHandler.sendEventToMeta(lead.Id);
             }

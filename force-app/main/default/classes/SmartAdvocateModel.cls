@@ -136,7 +136,8 @@ public class SmartAdvocateModel {
                    Used_Marriott_Website__c, Browser_Type_Used__c, Device_Type_Used__c, 
                    Have_Marriott_Bonvoy_Account__c, Privacy_Tools_Enabled__c, 
                    Facebook_Account_During_Booking__c, Logged_Into_Facebook_During_Booking__c, 
-                   Logged_Into_Facebook_90_Days_Prior__c, Refused_to_Provide_SSN__c, Will_Provide_SSN__c
+                   Logged_Into_Facebook_90_Days_Prior__c, Refused_to_Provide_SSN__c, Will_Provide_SSN__c,
+                   Date_Mariott_Website_Visited__c, Visited_Website_on_Laptop__c
             FROM Case_Details__c
             WHERE Lead__c IN :leadIds
         ]) {

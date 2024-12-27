@@ -16,21 +16,31 @@ public with sharing class LeadPDFController {
         ];
 
         // Query related Case Details
-        caseDetails = [
+        List<Case_Details__c> caseDetailsList = [
             SELECT Id, Spoken_to_Another_Attorney__c, Resided_in_CA_During_Booking__c, 
-                   Used_Marriott_Website__c, Browser_Type_Used__c, Device_Type_Used__c, 
-                   Have_Marriott_Bonvoy_Account__c, Privacy_Tools_Enabled__c, 
-                   Facebook_Account_During_Booking__c, Logged_Into_Facebook_During_Booking__c, 
-                   Logged_Into_Facebook_90_Days_Prior__c, Refused_to_Provide_SSN__c, 
-                   Will_Provide_SSN__c, Proof_Received__c, Date_Mariott_Website_Visited__c, Visited_Website_on_Laptop__c,
-                   Non_Mobile_Device_Setup__c
+                Used_Marriott_Website__c, Browser_Type_Used__c, Device_Type_Used__c, 
+                Have_Marriott_Bonvoy_Account__c, Privacy_Tools_Enabled__c, 
+                Facebook_Account_During_Booking__c, Logged_Into_Facebook_During_Booking__c, 
+                Logged_Into_Facebook_90_Days_Prior__c, Refused_to_Provide_SSN__c, 
+                Will_Provide_SSN__c, Proof_Received__c, Date_Mariott_Website_Visited__c, 
+                Visited_Website_on_Laptop__c, Non_Mobile_Device_Setup__c
             FROM Case_Details__c
             WHERE Lead__c = :leadId
             LIMIT 1
         ];
+
+        // Check if caseDetails list is not empty before processing
+        if (!caseDetailsList.isEmpty()) {
+            caseDetails = caseDetailsList[0];  // Access the first (and only) record
+            // Process the case detail here
+            System.debug('Case Detail found: ');
+        } else {
+            System.debug('No Case Details found for Lead ID: ' + leadId);
+        }
         System.debug('caseDetails ::: ' + caseDetails);
+
         // Query related Client Information
-        clientInformation = [
+        List<Client_Information__c> clientInformationList = [
             SELECT Id, Emergency_Contact_Name__c, Emergency_Contact_Phone__c, 
                    Have_Permission_to_Contact_Emergency__c, Have_Permission_to_Reference_Case__c,
                    Date_of_Birth__c, United_States_Resident__c
@@ -38,5 +48,13 @@ public with sharing class LeadPDFController {
             WHERE Lead__c = :leadId
             LIMIT 1
         ];
+
+        // Check if clientInformation list is not empty before processing
+        if (!clientInformationList.isEmpty()) {
+            clientInformation = clientInformationList[0];  // Access the first (and only) record
+            // Process the case detail here
+        } else {
+            System.debug('No Case Details found for Lead ID: ' + leadId);
+        }
     }
 }

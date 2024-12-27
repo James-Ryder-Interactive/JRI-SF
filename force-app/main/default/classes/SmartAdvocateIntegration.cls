@@ -96,10 +96,11 @@ public class SmartAdvocateIntegration {
         String apiKey, 
         String documentUploadEndpoint
     ) {
-        // Retrieve all attachments related to the Lead
+        // Retrieve all attachments related to the Lead (ContentVersion + Attachment)
         List<ContentDocumentLink> attachments = [
             SELECT Id, ContentDocumentId
-            FROM ContentDocumentLink WHERE LinkedEntityId = :Id.valueOf(leadID)
+            FROM ContentDocumentLink 
+            WHERE LinkedEntityId = :Id.valueOf(leadID)
         ];
 
         // Extract ContentDocumentIds from attachments
@@ -115,23 +116,49 @@ public class SmartAdvocateIntegration {
             WHERE ContentDocumentId IN :contentDocumentIds AND IsLatest = true
         ];
 
-        // Loop through the attachments and process the ContentVersions
+        // Loop through the ContentVersions and process them
         for (ContentVersion contentVersion : contentVersions) {
+            System.debug('Processing ContentVersion: ' + contentVersion);
 
-            // This is for Roundup
-            String subCategory = contentVersion.Title.contains('Retainer') ? 'Retainer Agreement' : 'Proof of Claim';
+            String subCategory = contentVersion.Title.contains('Retainer') ? 'Retainer Agreement' : 
+                                contentVersion.Title.contains('Intake') ? 'Questionnaire' : 'Proof of Claim';
+
             String category = 'Client Docs';
-        
-            //String subCategory = contentVersion.Title.contains('Roundup CFA') ? 'Retainer Agreement' : 'Authorization Medical';
-            String filename = caseID + '_' + category + '_' + subCategory +  '.' + contentVersion.FileExtension;
-
+            String filename = caseID + '_' + category + '_' + subCategory + '.' + contentVersion.FileExtension;
+            
             String endpoint = documentUploadEndpoint + 
                 '?filename=' + EncodingUtil.urlEncode(filename, 'UTF-8') +
                 '&SACaseNumber=' + caseID + 
-                '&Category=' + EncodingUtil.urlEncode(category, 'UTF-8').replace('+', '%20') + '&SubCategory=' + EncodingUtil.urlEncode(subCategory, 'UTF-8');
+                '&Category=' + EncodingUtil.urlEncode(category, 'UTF-8') + 
+                '&SubCategory=' + EncodingUtil.urlEncode(subCategory, 'UTF-8');
 
             sendDocument(endpoint, apiKey, contentVersion.VersionData, filename);
+        }
+
+        // Now, handle Attachments (those in the Attachment object)
+        List<Attachment> attachmentsToProcess = [
+            SELECT Id, Name, Body, ContentType
+            FROM Attachment 
+            WHERE ParentId = :Id.valueOf(leadID)
+        ];
+
+        for (Attachment attachment : attachmentsToProcess) {
+            String attachmentName = attachment.Name;
+            String fileExtension = attachmentName.substring(attachmentName.lastIndexOf('.') + 1);
+
+            String subCategory = attachment.Name.contains('Retainer') ? 'Retainer Agreement' : 
+                    attachment.Name.contains('Intake') ? 'Questionnaire' : 'Proof of Claim';
+
+            String category = 'Client Docs';
+            String filename = caseID + '_' + category + '_' + subCategory + '.' + fileExtension;
+
+            String endpoint = documentUploadEndpoint + 
+                '?filename=' + EncodingUtil.urlEncode(filename, 'UTF-8') + 
+                '&SACaseNumber=' + caseID + 
+                '&Category=' + EncodingUtil.urlEncode('Client Docs', 'UTF-8') +
+                '&SubCategory=' + EncodingUtil.urlEncode('Other', 'UTF-8');
             
+            sendDocument(endpoint, apiKey, attachment.Body, filename);
         }
     }
 
